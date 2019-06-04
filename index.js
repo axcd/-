@@ -4,9 +4,7 @@ $(document).ready(function(){
   var x;
 
   $("a").click(function(){
-    x = transition[Math.floor(Math.random()*10)];
-    window.alert(x) ;
-    $(this).attr("data-transition",x);
+    $(this).attr("data-transition",transition[Math.floor(Math.random()*10)]);
   });
 
 });
