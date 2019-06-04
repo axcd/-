@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   $("a").click(function(){
     x = transition[Math.floor(Math.random()*10)];
-    window.alert(x) ;
+    window.alert(x+"1") ;
     $("a").attr("data-transition",x);
   });
 
