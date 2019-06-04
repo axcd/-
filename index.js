@@ -6,7 +6,7 @@ $(document).ready(function(){
   $("a").click(function(){
     x = transition[Math.floor(Math.random()*10)];
     window.alert(x) ;
-    $("[href='#pageone']").attr("data-transition",x);
+    $("a").attr("data-transition",'"'+x+'"');
   });
 
 });
