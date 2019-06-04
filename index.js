@@ -4,7 +4,8 @@ $(document).ready(function(){
   var x;
 
   $($("[data-role='content']")).click(function(){
-    $("a").prop("data-transition",transition[Math.floor(Math.random()*10)]);
+    $("[href='#pageone']").removeAttr(data-transition);
+    $("[href='#pageone']").prop("data-transition",transition[Math.floor(Math.random()*10)]);
   });
 
 });
