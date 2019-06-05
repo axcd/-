@@ -18,7 +18,7 @@ $(document).ready(function(){
   
   $("a").click(function(){
   
-    $("a").css("herf","#"+ transition[Math.floor(Math.random()*10)]);
+    $(this).css("herf","#"+ transition[Math.floor(Math.random()*10)]);
 
   });
 
