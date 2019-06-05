@@ -18,8 +18,8 @@ $(document).ready(function(){
   
   $("a").click(function(){
     x = transition[Math.floor(Math.random()*10)];
-    window.alert(x);
-    $(this).css("herf","#"+ x );
+    //window.alert(x);
+    $(this).attr("herf","#"+ x );
 
   });
 
