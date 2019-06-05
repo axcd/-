@@ -4,15 +4,15 @@ $(document).ready(function(){
 
   $("div#pagetwo").click(function(){
 
-    $("[href='#pageone']").attr("data-transition",transition[Math.floor(Math.random()*10)]);
-    $("[href='#pagetwo']").removeAttr("data-transition");
+    $("[href='#pageone']").prop("data-transition",transition[Math.floor(Math.random()*10)]);
+    $("[href='#pagetwo']").removeProp("data-transition");
 
   });
 
 $("div#pageone").click(function(){
 
-    $("[href='#pagetwo']").attr("data-transition",transition[Math.floor(Math.random()*10)]);
-    $("[href='#pageone']").removeAttr("data-transition");
+    $("[href='#pagetwo']").prop("data-transition",transition[Math.floor(Math.random()*10)]);
+    $("[href='#pageone']").removeProp("data-transition");
 
   });
 
