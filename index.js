@@ -4,8 +4,8 @@ $(document).ready(function(){
 
   $("div#pagetwo").click(function(){
 
-    $("[href='#pageone']").css("data-transition",transition[Math.floor(Math.random()*10)]);
-    //$("[href='#pageone']").prop("data-transition",transition[Math.floor(Math.random()*10)]);
+    //$("[href='#pageone']").css("data-transition",transition[Math.floor(Math.random()*10)]);
+    $("[href='#pageone']").prop("data-transition",transition[Math.floor(Math.random()*10)]);
     //$("[href='#pagetwo']").removeProp("data-transition");
 
   });
