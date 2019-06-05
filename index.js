@@ -17,8 +17,9 @@ $(document).ready(function(){
   //});
   
   $("a").click(function(){
-  
-    $(this).css("herf","#"+ transition[Math.floor(Math.random()*10)]);
+    x = transition[Math.floor(Math.random()*10)];
+    window.alert(x);
+    $(this).css("herf","#"+ x );
 
   });
 
