@@ -6,6 +6,7 @@ $(document).ready(function(){
     x = transition[Math.floor(Math.random()*10)];
     //$(this).setAttribute("href","#" + x);
     $(this).href = "#"+x;
+    alert($(this).href);
   });
 
 });
