@@ -2,20 +2,18 @@ $(document).ready(function(){
 
   var t = ["fade", "flip", "flow", "pop", "slide", "slidefade", "slideup", "slidedown", "turn", "none"];
   var a = $("a");
-  alert(a.length);
 
   for (i = 0; i < a.length; i++) {
 
+    alert(a.length);
+
     a[i].onmouseover(function(){
-
       alert(this);
-
       x = t[Math.floor(Math.random()*10)];
-      //a[i].setAttribute("data-transition",x);
-      //alert(a[i].getAttribute("data-transition"));
-      a[i].href = "#"+x;
-      alert(a[i].href);
-
+      //this.setAttribute("data-transition",x);
+      //alert(this.getAttribute("data-transition"));
+      this.href = "#"+x;
+      alert(this.href);
     });
 
   };
