@@ -3,9 +3,9 @@ $(document).ready(function(){
   var t = ["fade", "flip", "flow", "pop", "slide", "slidefade", "slideup", "slidedown", "turn", "none"];
   
   var p = $("p");
-  //alert(p);
+  alert(p[0]);
   for(var i = 0;i < p.length;i++){
-    //alert(123);
+    
     p[i].mouseover(function(){
     alert(p[i]);
     //var a = this.next();
