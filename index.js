@@ -8,7 +8,7 @@ $(document).ready(function(){
     alert(x);
     //$(this).setAttribute("href","#" + x);
     $(this).find("a")[0].href = "#"+x;
-    alert($(this).href);
+    alert($(this).find("a")[0].href);
   });
 
 });
