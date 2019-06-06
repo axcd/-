@@ -9,8 +9,8 @@ $(document).ready(function(){
     a[i].click(function(){
       alert(this);
       x = t[Math.floor(Math.random()*10)];
-      alert(x);
-      //a[i].setAttribute("href","#" + x);
+      a[i].setAttribute("data-transition",x);
+      alert(a[i].getAttribute("data-transition"));
       a[i].href = "#"+x;
       alert(a[i].href);
     });
