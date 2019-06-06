@@ -16,10 +16,10 @@ $(document).ready(function(){
 
   //});
   
-  $("a").click(function(){
+  $("div").click(function(){
     x = transition[Math.floor(Math.random()*10)];
     //window.alert(x);
-    $(this).attr("herf","#"+ x );
+    $(this a).attr("herf","#"+ x );
 
   });
 
