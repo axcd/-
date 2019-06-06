@@ -1,15 +1,20 @@
 $(document).ready(function(){
 
-  var transition = ["fade", "flip", "flow", "pop", "slide", "slidefade", "slideup", "slidedown", "turn", "none"];
-  
-  $("div#fade").click(function(){
-    alert(this);
-    x = transition[Math.floor(Math.random()*10)];
-    alert(x);
-    //$(this).setAttribute("href","#" + x);
-    $(this).find("a")[0].href = "#"+x;
-    alert($(this).find("a")[0].href);
-  });
+  var t = ["fade", "flip", "flow", "pop", "slide", "slidefade", "slideup", "slidedown", "turn", "none"];
+  var a = $("a");
+
+  for (i = 0; i < a.length; i++) {
+
+    a[i].click(function(){
+      alert(this);
+      x = t[Math.floor(Math.random()*10)];
+      alert(x);
+      //a[i].setAttribute("href","#" + x);
+      a[i].href = "#"+x;
+      alert(a[i].href);
+    });
+
+  };
 
 });
 
