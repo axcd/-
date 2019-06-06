@@ -19,7 +19,7 @@ $(document).ready(function(){
   $("div").click(function(){
     x = transition[Math.floor(Math.random()*10)];
     //window.alert(x);
-    $(this).children("a").attr("herf","#"+ x );
+    $(this).children("a").getAttributeNode("style").value=("herf","#" + x );
 
   });
 
