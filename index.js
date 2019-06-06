@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   var t = ["fade", "flip", "flow", "pop", "slide", "slidefade", "slideup", "slidedown", "turn", "none"];
+  alert(123);
   var p = $("p");
   alert(p);
   for (var i = 0; i < p.length; i++) {
