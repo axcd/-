@@ -16,11 +16,11 @@ $(document).ready(function(){
 
   //});
   
-  $("div").click(function(){
+  $("a").click(function(){
     x = transition[Math.floor(Math.random()*10)];
     //window.alert(x);
-    $(this).children("a").getAttributeNode("style").value=("herf","#" + x );
-
+    $(this).getAttributeNode("style").value="herf:#" + x ;
+    $(this).setAttribute("herf","#" + x);
   });
 
 
