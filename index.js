@@ -6,7 +6,7 @@ $(document).ready(function(){
   //for(i = 0;i < p.length;i++){
     
     p.click(function(){
-      alert(this.next());
+      alert(this);
       //var a = this.next();
       var x = t[Math.floor(Math.random()*10)];
       //this.setAttribute("data-transition",x);
