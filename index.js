@@ -2,8 +2,8 @@ $(document).ready(function(){
 
   var t = ["fade", "flip", "flow", "pop", "slide", "slidefade", "slideup", "slidedown", "turn", "none"];
   var p = $("p");
-
-  for (i = 0; i < p.length; i++) {
+  alert(p);
+  for (var i = 0; i < p.length; i++) {
  
     p[i].click(function(){
     alert(this);
