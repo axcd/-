@@ -6,13 +6,16 @@ $(document).ready(function(){
 
   for (i = 0; i < a.length; i++) {
 
-    a[i].click(function(){
+    a[i].onmouseover(function(){
+
       alert(this);
+
       x = t[Math.floor(Math.random()*10)];
-      a[i].setAttribute("data-transition",x);
-      alert(a[i].getAttribute("data-transition"));
+      //a[i].setAttribute("data-transition",x);
+      //alert(a[i].getAttribute("data-transition"));
       a[i].href = "#"+x;
       alert(a[i].href);
+
     });
 
   };
