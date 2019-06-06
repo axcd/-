@@ -8,12 +8,12 @@ $(document).ready(function(){
     alert(i);
 
     a[i].onmouseover(function(){
-       alert(this);
-       x = t[Math.floor(Math.random()*10)];
-       //this.setAttribute("data-transition",x);
-       //alert(this.getAttribute("data-transition"));
-       this.href = "#"+x;
-       alert(this.href);
+      alert(this);
+      x = t[Math.floor(Math.random()*10)];
+      //this.setAttribute("data-transition",x);
+      //alert(this.getAttribute("data-transition"));
+      this.href = "#"+x;
+      alert(this.href);
     });
 
   };
