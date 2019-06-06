@@ -3,9 +3,8 @@ $(document).ready(function(){
   var t = ["fade", "flip", "flow", "pop", "slide", "slidefade", "slideup", "slidedown", "turn", "none"];
   var p = $("p");
 
-  for (i = 0; i < a.length; i++) {
-
-   
+  for (i = 0; i < p.length; i++) {
+ 
     p[i].click(function(){
     alert(this);
     var a = this.next();
