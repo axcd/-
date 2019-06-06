@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   for (i = 0; i < a.length; i++) {
 
-    alert(a.length);
+    alert(i);
 
     a[i].onmouseover(function(){
       alert(this);
