@@ -10,8 +10,9 @@ $(document).ready(function(){
   
   $("a").click(function(){
     var x = t[Math.floor(Math.random()*9)];
+    alert(x+"1");
     this.setAttribute("data-transition",x);
-    alert(this.getAttribute("data-transition"));
+    //alert(this.getAttribute("data-transition"));
   });
 
 });
