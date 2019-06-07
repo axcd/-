@@ -10,8 +10,8 @@ $(document).ready(function(){
   
   $("a").click(function(){
     var x = t[Math.floor(Math.random()*10)];
-    this.setAttribute("data-transition","#"+x);
-    alert(this.getAttribute("data-transition","#"+x));
+    this.setAttribute("data-transition",x);
+    alert(this.getAttribute("data-transition"));
   });
 
 });
