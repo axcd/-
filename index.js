@@ -4,7 +4,7 @@ $(document).ready(function(){
   
   $("a").click(function(){
     var x = t[Math.floor(Math.random()*9)];
-    this.prop("data-transition",x);  
+    this.attr("data-transition",x);  
   });
 
 });
