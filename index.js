@@ -1,19 +1,11 @@
 $(document).ready(function(){
 
-  var t = ["fade", "flip", "flow", "pop", "slide", "slidefade", "slideup", "slidedown", "turn", "none"]; 
-    
-    /*
-    $("a").click(function(){
-    var x = t[Math.floor(Math.random()*9)];
-    //alert(x);
-    this.href = "#"+x;
-  });
-*/
+  var t = ["fade", "flip", "flow", "pop", "slide", "slidefade", "slideup", "slidedown", "turn"];
   
   $("a").click(function(){
+    this.removeAttr("data-transition");
     var x = t[Math.floor(Math.random()*9)];
-    this.attr("data-transition",x);
-    this.removeAttr("data-transition");  
+    this.attr("data-transition",x);  
   });
 
 });
