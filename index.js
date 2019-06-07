@@ -4,7 +4,7 @@ $(document).ready(function(){
     
     $("a").click(function(){
     var x = t[Math.floor(Math.random()*9)];
-    alert(x);
+    //alert(x);
     this.href = "#"+x;
   });
 
