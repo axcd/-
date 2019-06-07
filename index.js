@@ -6,9 +6,9 @@ $(document).ready(function(){
     alert(this);
     //var a = this.find("a");
     var x = t[Math.floor(Math.random()*10)];
-    a.href = "#"+x;
-    //alert(a);
-    alert(a.href);
+    this.href = "#"+x;
+    alert(1);
+    alert(this.href);
   });
 
 });
