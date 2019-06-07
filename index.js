@@ -4,7 +4,6 @@ $(document).ready(function(){
     
   $("a").click(function(){
     //alert(this);
-    //var a = this.find("a");
     var x = t[Math.floor(Math.random()*10)];
     this.href = "#"+x;
     //alert(this.href);
