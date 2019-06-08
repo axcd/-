@@ -10,10 +10,10 @@ $(document).ready(function(){
   });
 
   $("p").click(function(){
-    x = t[Math.floor(Math.random()*9)];alert(1);
-    this.children("a").setAttribute("data-transition",x); alert(2);
+    x = t[Math.floor(Math.random()*9)]; alert(1);
+    this.find("a").setAttribute("data-transition",x); alert(2);
     window.location.href="https://baidu.com" //axcd.github.io/mao/"+this.children("a").href;
-    alert(x);
+    alert(3);
   });
 
 });
