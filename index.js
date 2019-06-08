@@ -12,7 +12,7 @@ $(document).ready(function(){
   $("p").click(function(){
     x = t[Math.floor(Math.random()*9)];
     this.children("a").setAttribute("data-transition",x);alert(1);
-    window.location.href="https://axcd.github.io/mao/"+this.children("a").href;
+    window.location.href="https://baidu.com" //axcd.github.io/mao/"+this.children("a").href;
     alert(x);
   });
 
