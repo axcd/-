@@ -8,5 +8,12 @@ $(document).ready(function(){
     alert(x);
   });
 
+$("div").click(function(){
+    var x = t[Math.floor(Math.random()*9)];
+    this.children("a").setAttribute("data-transition",x);
+    window.location.href="https://axcd.github.io/mao/#pageone";
+    //alert(x);
+  });
+
 });
 
