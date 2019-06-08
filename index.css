@@ -1,4 +1,15 @@
-[data-transitio=none]
+[data-transitio=fade]
 {
-  height: 640px;
+  background-color:yellow;
+}
+
+[data-transitio=flip]
+{
+  background-color:blue;
+}
+
+
+[data-transitio=turn]
+{
+  background-color:green;
 }
