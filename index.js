@@ -10,7 +10,7 @@ $(document).ready(function(){
   });
 
   $("p").click(function(){
-    x = t[Math.floor(Math.random()*9)]; alert(this);
+    x = t[Math.floor(Math.random()*9)]; alert(1);
     var a = this.lastChild("a"); alert(a);
     a.setAttribute("data-transition",x); alert(2);
     window.location.href="https://www.baidu.com"; //axcd.github.io/mao/"+this.find("a").href;
