@@ -1,4 +1,6 @@
 #include <android_native_app_glue.h>
+
+void displayKeyboard(android_app* mApplication) {
     // Attaches the current thread to the JVM.
     jint lResult;
     jint lFlags = 0;
