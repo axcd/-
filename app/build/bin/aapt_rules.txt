@@ -1,0 +1,27 @@
+# view res/layout/main.xml #generated:7
+-keep class com.mao.record.CalendarView { <init>(...); }
+
+# view res/layout/day_view.xml #generated:2
+-keep class com.mao.record.DayView { <init>(...); }
+
+# view AndroidManifest.xml #generated:50
+-keep class com.mao.record.InfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:27
+-keep class com.mao.record.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:57
+-keep class com.mao.record.SetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.mao.record.SubActivity { <init>(...); }
+
+# onClick res/layout/info.xml #generated:119
+-keepclassmembers class * { *** onCancel(...); }
+
+# onClick res/layout/info.xml #generated:127
+-keepclassmembers class * { *** onOk(...); }
+
+# onClick res/layout/set.xml #generated:98
+-keepclassmembers class * { *** set(...); }
+

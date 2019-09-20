@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:id="@+id/header"
+		android:layout_height="30dp"
+		android:layout_width="match_parent"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="50dp"
+		android:layout_marginRight="50dp"
+		android:layout_marginBottom="10dp">
+
+		<ImageView
+			android:id="@+id/pre"
+			android:layout_height="30dp"
+			android:layout_width="30dp"
+			android:src="@drawable/left"
+			android:layout_alignParentLeft="true"/>
+
+		<TextView
+			android:id="@+id/date"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:gravity="center"
+			android:text=""
+			android:textSize="20sp"/>
+
+		<ImageView
+			android:id="@+id/next"
+			android:layout_height="30dp"
+			android:layout_width="30dp"
+			android:src="@drawable/right"
+			android:layout_alignParentRight="true"/>
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/week_header"
+		android:layout_height="40dp"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:background="#BFFBBF">
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="周日"
+			android:gravity="center"
+			android:textColor="#FF0000"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="周一"
+			android:gravity="center"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="周二"
+			android:gravity="center"/>
+
+		<TextView
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="周三"
+			android:gravity="center"
+			android:layout_width="0dp"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="周四"
+			android:gravity="center"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="周五"
+			android:gravity="center"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="周六"
+			android:gravity="center"
+			android:textColor="#FF0000"/>
+
+	</LinearLayout>
+
+	<GridView
+		android:id="@+id/days"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:numColumns="7"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp">
+
+	</GridView>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_margin="20dp">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:textSize="15sp"
+			android:textColor="#FFEB2621"
+			android:text="提示：长按删除该天加班信息"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
