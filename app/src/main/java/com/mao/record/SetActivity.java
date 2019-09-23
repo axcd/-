@@ -8,6 +8,8 @@ import android.text.*;
 import android.view.*;
 import android.graphics.*;
 import android.content.*;
+import com.mao.record.settings.*;
+import com.mao.record.io.FileManager;
 
 public class SetActivity extends Activity
 {
@@ -86,7 +88,7 @@ public class SetActivity extends Activity
 
 		String daystr = editText.getText().toString();
 		if(!daystr.equals("")){
-			int day = Integer.parseInt(daystr);Log.info(daystr);
+			int day = Integer.parseInt(daystr);
 			if(day>=1 && day<=28){
 				Settings.setDay(String.valueOf(day));
 			}else{

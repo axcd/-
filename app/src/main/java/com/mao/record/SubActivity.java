@@ -8,12 +8,13 @@ import android.view.View.*;
 import android.widget.TextView.*;
 import android.text.*;
 import java.util.*;
+import com.mao.record.vw.*;
+import com.mao.record.settings.*;
 
 public class SubActivity extends Activity
 {
 	
 	private final EditText editTexts[] = new EditText[10];
-	//private List<String> settings;
 	private ArrayList<String> dayList;
 	
     @Override
@@ -24,8 +25,6 @@ public class SubActivity extends Activity
 		
 		dayList = MainActivity.getCalendarView().getList();
 	
-        //dayList = getIntent().getStringArrayListExtra("dayList");
-		
 		editTexts[0] = (EditText)findViewById(R.id.mainEditText1);
 		editTexts[1] = (EditText)findViewById(R.id.mainEditText2);
 		editTexts[2] = (EditText)findViewById(R.id.mainEditText3);

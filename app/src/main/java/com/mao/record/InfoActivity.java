@@ -8,6 +8,7 @@ import android.widget.*;
 import java.util.*;
 import android.widget.AdapterView.*;
 import android.text.*;
+import com.mao.record.vw.*;
 
 public class InfoActivity extends Activity
 {
@@ -39,12 +40,10 @@ public class InfoActivity extends Activity
 		list1=new ArrayList<String>();
 		list1.add("白班");
 		list1.add("夜班");
-		//list1.add("休班");
 		list1.add("休息");
 		adapter1=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list1);
 		adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spDown1.setAdapter(adapter1);
-		//spDown1.setSelection(0);
 		
 		spDown2=(Spinner) findViewById(R.id.calendarviewSpinner2);
 		list2=new ArrayList<String>();
@@ -87,7 +86,6 @@ public class InfoActivity extends Activity
 		adapter3 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list3);
 		adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spDown3.setAdapter(adapter3);
-		//spDown3.setSelection(0);
 		
 		spDown4=(Spinner) findViewById(R.id.calendarviewSpinner4);
 		list4=new ArrayList<String>();
@@ -99,11 +97,11 @@ public class InfoActivity extends Activity
 		adapter4 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list4);
 		adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spDown4.setAdapter(adapter4);
-		//spDown4.setSelection(0);
 		
 		setSpinnerValue(spDown1,dayView.getInfoByIndex(1));
 		setSpinnerValue(spDown2,dayView.getInfoByIndex(2));
 		setSpinnerValue(spDown3,dayView.getInfoByIndex(3));
+		setSpinnerValue(spDown4,dayView.getInfoByIndex(4));
 
 	}
 

@@ -48,7 +48,7 @@
 		</activity>
 
 		<activity
-			android:label="信息"
+			android:label="加班信息"
 			android:theme="@android:style/Theme.Holo.Light.Dialog"
 			android:name=".InfoActivity">
 

@@ -8,6 +8,9 @@ import android.widget.AdapterView.*;
 import android.view.*;
 import android.content.*;
 import android.widget.PopupMenu.*;
+import com.mao.record.vw.CalendarView;
+import com.mao.record.io.FileManager;
+import com.mao.record.io.Log;
 
 public class MainActivity extends Activity
 {
@@ -50,8 +53,6 @@ public class MainActivity extends Activity
 		{
 			case R.id.mainMenuSub:
 				Intent sub = new Intent(MainActivity.this,SubActivity.class);
-				//ArrayList<String> dayList = calendarView.getList();
-				//sub.putStringArrayListExtra("dayList",dayList);
 				startActivity(sub);
 				return true;
 			case R.id.mainMenuSet:

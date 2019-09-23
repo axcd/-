@@ -1,5 +1,6 @@
-package com.mao.record;
+package com.mao.record.settings;
 import java.util.*;
+import com.mao.record.io.FileManager;
 
 public class Settings
 {

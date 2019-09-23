@@ -1,4 +1,4 @@
-package com.mao.record;
+package com.mao.record.vw;
 
 import android.widget.*;
 import android.content.*;
@@ -13,6 +13,9 @@ import android.text.*;
 import java.io.*;
 import android.os.*;
 import android.app.*;
+import com.mao.record.settings.*;
+import com.mao.record.io.FileManager;
+import com.mao.record.*;
 
 public class CalendarView extends LinearLayout
 {
@@ -64,7 +67,7 @@ public class CalendarView extends LinearLayout
 	}
 	
 	public void bindControl(Context context){
-		
+
 		LayoutInflater inflate = LayoutInflater.from(context);
 		inflate.inflate(R.layout.calendar_view,this);
 		
@@ -341,7 +344,7 @@ public class CalendarView extends LinearLayout
 				
 			cv.setOnLongClickListener( new OnLongClickListener(){
 				public boolean onLongClick(View view){
-					String[] info = {String.valueOf(day),"班别","小时","倍数"};
+					String[] info = {String.valueOf(day),"","","",""};
 					cv.setInfo(info);
 					clearDay(day);
 					setSelect(cv);

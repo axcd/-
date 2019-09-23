@@ -1,8 +1,9 @@
-package com.mao.record;
+package com.mao.record.io;
+
 import java.io.*;
-import android.os.*;
-import java.text.*;
-import java.util.*;
+import android.os.Environment;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Log
 {

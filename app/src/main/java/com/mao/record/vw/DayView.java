@@ -1,17 +1,21 @@
-package com.mao.record;
+package com.mao.record.vw;
+
 import android.widget.*;
 import android.content.*;
 import android.util.*;
 import android.graphics.*;
 import android.os.*;
 import java.io.*;
+import com.mao.record.io.Log;
 
 public class DayView extends TextView 
 {
 	public boolean isToday = false;
 	public boolean isSelected = false;
-	private String[] info = {"0","班别","小时","倍数","类型"};        
+	private String[] info = {"","","","",""};        
 	private Paint paint = new Paint();
+	private int w = 45;
+	private int h = 60;
 	
 	public DayView(Context context){
 		super(context);
@@ -38,22 +42,24 @@ public class DayView extends TextView
 	{
 		super.onDraw(canvas);
 		canvas.translate(getWidth()/2,getHeight()/2);
-		
+		w = getWidth()/2;
+		h = getHeight()/2;
+	
 		if(!getText().toString().equals("")){
 			
 			//画班别
 			if(info[1].contains("夜")){
 				drawShift(canvas,"#FF0000",120,"#000000","夜");
 			}else if(info[1].contains("白")){
-				drawShift(canvas,"#FF0000",100,"#FFFFFF","白");
+				drawShift(canvas,"#FF0000",150,"#FFFFFF","白");
 			}else if(info[1].contains("休")){
 				drawShift(canvas,"#FF0000",200,"#0000FF","休");
 			}
 
 			//画小时和倍数
-			if(!info[2].equals("小时") && !info[1].equals("休息")){
+			if(!info[2].equals("") && !info[1].equals("休息")){
 				drawHour(canvas,info[2],"#000000");
-				drawRect(canvas,-44,30,44,60,"#F0000F",50);
+				drawRect(canvas,1-w,h/2,w-1,h,"#F0000F",50);
 				if(info[3].equals("1.5倍")){
 					drawHour(canvas,info[2],"#0000FF");
 				}else if(info[3].equals("2.0倍")){
@@ -77,9 +83,9 @@ public class DayView extends TextView
 			}else{
 				//drawRect(canvas,-44,-57,44,60,"#CCCCCC",80);
 			}
-			drawRect(canvas,-44,-57,44,60,"#CCCCCC",80);
+			drawRect(canvas,1-w,3-h,w-1,h,"#CCCCCC",80);
 		}else{
-			drawRect(canvas,-44,-57,44,60,"#666666",40);
+			drawRect(canvas,1-w,3-h,w-1,h,"#666666",40);
 		}
 	}
 	
@@ -95,10 +101,10 @@ public class DayView extends TextView
 		
 		paint.setColor(Color.parseColor(bkgColor));
 		paint.setAlpha(alpha);
-		canvas.drawCircle(-28,-40,13,paint);	
+		canvas.drawCircle(17-w,20-h,13,paint);	
 		paint.setColor(Color.parseColor(fontColor));
 		paint.setTextSize(18f);
-		canvas.drawText(shift,0,1,-37,-35,paint);	
+		canvas.drawText(shift,0,1,8-w,25-h,paint);	
 	}
 	
 	public void drawHour(Canvas canvas, String h, String hcolor){
@@ -126,7 +132,7 @@ public class DayView extends TextView
 	public void drawCircle(Canvas canvas,String bkgColor,int alpha){
 		paint.setColor(Color.parseColor(bkgColor));
 		paint.setAlpha(alpha);
-		canvas.drawCircle(0,0,45,paint);
+		canvas.drawCircle(0,0,w>h?h:w,paint);
 	}
 	
 	public void setInfo(String[] info){

@@ -45,7 +45,7 @@
 		android:orientation="horizontal"
 		android:layout_marginLeft="20dp"
 		android:layout_marginRight="20dp"
-		android:background="#BFFBBF">
+		android:background="#00FF00">
 
 		<TextView
 			android:layout_width="0dp"
@@ -105,6 +105,7 @@
 		android:layout_height="wrap_content"
 		android:layout_width="match_parent"
 		android:numColumns="7"
+		android:background="#FFFF00"
 		android:layout_marginLeft="20dp"
 		android:layout_marginRight="20dp">
 
