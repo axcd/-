@@ -41,18 +41,24 @@ public class DayView extends TextView
 	protected void onDraw(Canvas canvas)
 	{
 		super.onDraw(canvas);
-		canvas.translate(getWidth()/2,getHeight()/2);
 		w = getWidth()/2;
 		h = getHeight()/2;
-	
+		canvas.translate(w,h);
+
 		if(!getText().toString().equals("")){
 			
 			//画班别
-			if(info[1].contains("夜")){
+			if(info[4].contains("调休")){
+				drawShift(canvas,"#0000FF",60,"#FF0000","调");
+			}else if(info[4].contains("事假")){
+				drawShift(canvas,"#0000FF",60,"#FF0000","事");
+			}else if(info[4].contains("病假")){
+				drawShift(canvas,"#0000FF",60,"#FF0000","病");
+			}else if(info[1].contains("夜班")){
 				drawShift(canvas,"#FF0000",120,"#000000","夜");
-			}else if(info[1].contains("白")){
+			}else if(info[1].contains("白班")){
 				drawShift(canvas,"#FF0000",150,"#FFFFFF","白");
-			}else if(info[1].contains("休")){
+			}else if(info[1].contains("休息")){
 				drawShift(canvas,"#FF0000",200,"#0000FF","休");
 			}
 

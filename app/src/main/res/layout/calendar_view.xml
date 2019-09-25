@@ -10,9 +10,9 @@
 		android:layout_height="30dp"
 		android:layout_width="match_parent"
 		android:layout_marginTop="20dp"
-		android:layout_marginLeft="50dp"
-		android:layout_marginRight="50dp"
-		android:layout_marginBottom="10dp">
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp"
+		android:layout_marginBottom="15dp">
 
 		<ImageView
 			android:id="@+id/pre"
@@ -43,8 +43,8 @@
 		android:layout_height="40dp"
 		android:layout_width="match_parent"
 		android:orientation="horizontal"
-		android:layout_marginLeft="20dp"
-		android:layout_marginRight="20dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
 		android:background="#00FF00">
 
 		<TextView
@@ -106,8 +106,8 @@
 		android:layout_width="match_parent"
 		android:numColumns="7"
 		android:background="#FFFF00"
-		android:layout_marginLeft="20dp"
-		android:layout_marginRight="20dp">
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp">
 
 	</GridView>
 
@@ -123,7 +123,7 @@
 			android:layout_width="match_parent"
 			android:textSize="15sp"
 			android:textColor="#FFEB2621"
-			android:text="提示：长按删除该天加班信息"/>
+			android:text="提示：长按可删除该天加班信息"/>
 
 	</LinearLayout>
 

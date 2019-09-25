@@ -105,7 +105,6 @@ public class Settings
 		settings.add("day:" + day);
 		settings.add("base:" + base);
 		settings.add("achi:" + achi);
-
 		settings.add("diff:" + diff);
 		settings.add("noun:" + noun);
 		settings.add("fund:" + fund);
