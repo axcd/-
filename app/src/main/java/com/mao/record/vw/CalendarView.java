@@ -29,7 +29,7 @@ public class CalendarView extends LinearLayout
 	private List<String>[] infos = {new ArrayList(),new ArrayList()};
 	
 	private DayView dayView;
-	private int startDay;
+	private int startDay=1;
 	private Date startDate;
 	private Date endDate;
 	
@@ -52,7 +52,9 @@ public class CalendarView extends LinearLayout
 
 		//保证startDay以后显示下月
 		Settings.getSettings();
-		startDay = Integer.parseInt(Settings.getDay());
+		if(Settings.get("day")!=null){
+			startDay = Integer.parseInt(Settings.get("day"));
+		}
 		if(curDate.get(Calendar.DAY_OF_MONTH)>=startDay){
 			curDate.add(Calendar.MONTH,1);
 		}
@@ -97,7 +99,9 @@ public class CalendarView extends LinearLayout
 	public void renderCalendar(){
 		
 		//设置日历开始结束日期
-		startDay = Integer.parseInt(Settings.getDay());
+		if(Settings.get("day")!=null){
+			startDay = Integer.parseInt(Settings.get("day"));
+		}
 		Calendar calendar = (Calendar)curDate.clone();	
 		calendar.add(Calendar.MONTH,-1);
 		calendar.set(Calendar.DAY_OF_MONTH,startDay);

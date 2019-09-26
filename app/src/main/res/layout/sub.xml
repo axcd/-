@@ -51,7 +51,7 @@
 			android:gravity="center"
 			android:width="70sp"
 			android:maxLength="6"
-			android:text="2250"
+			android:text="2200"
 			android:inputType="numberDecimal"/>
 
 		<TextView
@@ -109,7 +109,7 @@
 			android:gravity="center"
 			android:width="70sp"
 			android:maxLength="2"
-			android:text="40"
+			android:text="12"
 			android:inputType="numberDecimal"/>
 
 	</LinearLayout>
@@ -133,7 +133,7 @@
 			android:gravity="center"
 			android:width="70sp"
 			android:maxLength="5"
-			android:text="12"
+			android:text="44"
 			android:inputType="numberDecimal"/>
 
 		<TextView
@@ -150,7 +150,7 @@
 			android:gravity="center"
 			android:width="70sp"
 			android:maxLength="5"
-			android:text="15"
+			android:text="0"
 			android:inputType="numberDecimal"/>
 
 	</LinearLayout>
@@ -215,7 +215,7 @@
 			android:gravity="center"
 			android:width="70sp"
 			android:maxLength="6"
-			android:text="500"
+			android:text="15"
 			android:inputType="numberDecimal"/>
 
 		<TextView
@@ -256,7 +256,7 @@
 			android:gravity="center"
 			android:width="70sp"
 			android:maxLength="5"
-			android:text="0"
+			android:text="100"
 			android:inputType="numberDecimal"/>
 
 		<TextView
@@ -273,7 +273,7 @@
 			android:gravity="center"
 			android:width="70sp"
 			android:maxLength="6"
-			android:text="0"
+			android:text="350"
 			android:inputType="numberDecimal"/>
 
 	</LinearLayout>
@@ -314,7 +314,7 @@
 			android:gravity="center"
 			android:width="70sp"
 			android:maxLength="6"
-			android:text="0"
+			android:text="160"
 			android:inputType="numberDecimal"/>
 
 	</LinearLayout>

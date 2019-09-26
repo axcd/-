@@ -19,7 +19,7 @@ public class SubActivity extends Activity
 	private float h1 = 0;
 	private float h2 = 0;
 	private float h3 = 0;
-	private float nd = 0;
+	private int nd = 0;
 	private float leave = 0;
 	private float sick = 0;
 	private float off = 0;
@@ -32,7 +32,8 @@ public class SubActivity extends Activity
 		
 		dayList = MainActivity.getCalendarView().getList();
 		getData();
-	
+
+		final EditText editText = (EditText)findViewById(R.id.mainEditText);
 		editTexts[0] = (EditText)findViewById(R.id.base);
 		editTexts[1] = (EditText)findViewById(R.id.achi);
 		editTexts[2] = (EditText)findViewById(R.id.h1);
@@ -52,26 +53,34 @@ public class SubActivity extends Activity
 		editTexts[16] = (EditText)findViewById(R.id.tax);
 		editTexts[17] = (EditText)findViewById(R.id.other_deduction);
 
-		final EditText editText = (EditText)findViewById(R.id.mainEditText);
-
-		editTexts[0].setText(Settings.getBase());
-		editTexts[1].setText(Settings.getAchi());
-		editTexts[2].setText(String.valueOf(h1));
-		editTexts[3].setText(String.valueOf(nd));
-		editTexts[4].setText(String.valueOf(h2));
-		editTexts[5].setText(String.valueOf(h3));
-		editTexts[6].setText(Settings.getDiff());
-	//	editTexts[7].setText(Settings.getBase());
-	//	editTexts[8].setText(Settings.getAchi());
-	//	editTexts[9].setText(Settings.getDiff());
-	//	editTexts[10].setText(Settings.getDiff());
-		editTexts[11].setText(String.valueOf(off));
-		editTexts[12].setText(String.valueOf(leave));
-		editTexts[13].setText(String.valueOf(sick));
-		editTexts[14].setText(Settings.getNoun());
-		editTexts[15].setText(Settings.getFund());
-	//	editTexts[16].setText(Settings.getDiff());
-	//	editTexts[17].setText(Settings.getDiff());
+		if(Settings.get("base")!=null){
+			editTexts[0].setText(Settings.get("base"));
+		}
+		if(Settings.get("achi")!=null){
+			editTexts[1].setText(Settings.get("achi"));
+		}
+		editTexts[2].setText(del(String.valueOf(h1)));
+		editTexts[3].setText(del(String.valueOf(nd)));
+		editTexts[4].setText(del(String.valueOf(h2)));
+		editTexts[5].setText(del(String.valueOf(h3)));
+		if(Settings.get("diff")!=null){
+			editTexts[6].setText(Settings.get("diff"));
+		}
+	//	editTexts[7].setText(Settings.get());
+	//	editTexts[8].setText(Settings.get());
+	//	editTexts[9].setText(Settings.get());
+	//	editTexts[10].setText(Settings.get());
+		editTexts[11].setText(del(String.valueOf(off)));
+		editTexts[12].setText(del(String.valueOf(leave)));
+		editTexts[13].setText(del(String.valueOf(sick)));
+		if(Settings.get("noun")!=null){
+			editTexts[14].setText(Settings.get("noun"));
+		}
+		if(Settings.get("fund")!=null){
+			editTexts[15].setText(Settings.get("fund"));
+		}
+	//	editTexts[16].setText(Settings.get());
+	//	editTexts[17].setText(Settings.get());
 		
 		editText.setText(getStr());
 		for(int i=0;i<editTexts.length;i++){
@@ -111,6 +120,12 @@ public class SubActivity extends Activity
 		}
 	}
 	
+	public String del(String str){
+		if(str.endsWith(".0")){
+			str = str.replace(".0","");
+		}
+		return str;
+	}
 
 	public void getData(){
 		
@@ -174,18 +189,8 @@ public class SubActivity extends Activity
 			Float fd = Float.parseFloat(editTexts[15].getText().toString());
 			Float tax = Float.parseFloat(editTexts[16].getText().toString());
 			Float od = Float.parseFloat(editTexts[17].getText().toString());
-			double f = 0;
-			
-			/*
-			if(f3>f7){
-				f = f1+f2+f1/21.75/8*(1.5*(f3-f7)+2*f4+3*f8)+f5*f6-f9-f0;
-			}else if(f4+f3>f7){
-				f = f1+f2+f1/21.75/8*(-1.5*f3+2*(f4+f3-f7)+3*f8)+f5*f6-f9-f0;
-			}else{
-				f = f1+f2+f1/21.75/8*(1.5*(f3-f7)+2*f4+3*f8)+f5*f6-f9-f0;
-			}
-			*/
-			f = ba+ac+ba/21.75/8*(1.5*(h1-bo)+2*h2+3*h3-l-0.3*s)+nd*na+wa+tra+tea+oa-(nn+fd+tax+od);
+				
+			double f = ba+ac+ba/21.75/8*(1.5*(h1-bo)+2*h2+3*h3-l-0.3*s)+nd*na+wa+tra+tea+oa-(nn+fd+tax+od);
 			str = String.format("%.2f",f);
 		}catch(Exception e){
 			str = "";

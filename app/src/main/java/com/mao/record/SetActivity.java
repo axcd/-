@@ -39,12 +39,12 @@ public class SetActivity extends Activity
 	
 	public void getSettings(){
 		
-		editText.setText(Settings.getDay());
-		editText1.setText(Settings.getBase());
-		editText2.setText(Settings.getAchi());
-		editText3.setText(Settings.getDiff());
-		editText4.setText(Settings.getNoun());
-		editText5.setText(Settings.getFund());		
+		editText.setText(Settings.get("day"));
+		editText1.setText(Settings.get("base"));
+		editText2.setText(Settings.get("achi"));
+		editText3.setText(Settings.get("diff"));
+		editText4.setText(Settings.get("noun"));
+		editText5.setText(Settings.get("fund"));		
 	}
 
 	public void set(View view){
@@ -53,35 +53,35 @@ public class SetActivity extends Activity
 		
 		String fund = editText5.getText().toString();
 		if(!fund.equals("")){
-			Settings.setFund(fund);
+			Settings.put("fund",fund);
 		}else{
 			tip = "请输入住房公积金";
 		}
 
 		String noun = editText4.getText().toString();
 		if(!noun.equals("")){
-			Settings.setNoun(noun);
+			Settings.put("noun",noun);
 		}else{
 			tip = "请输入社会保险";
 		}
 	
 		String diff = editText3.getText().toString();
 		if(!diff.equals("")){
-			Settings.setDiff(diff);
+			Settings.put("diff",diff);
 		}else{
 			tip = "请输入夜班补贴";
 		}
 		
 		String achi = editText2.getText().toString();
 		if(!fund.equals("")){
-			Settings.setAchi(achi);
+			Settings.put("achi",achi);
 		}else{
 			tip = "请输入本月绩效";
 		}
 
 		String base = editText1.getText().toString();
 		if(!base.equals("")){
-			Settings.setBase(base);
+			Settings.put("base",base);
 		}else{
 			tip = "请输入基本工资";
 		}
@@ -90,7 +90,7 @@ public class SetActivity extends Activity
 		if(!daystr.equals("")){
 			int day = Integer.parseInt(daystr);
 			if(day>=1 && day<=28){
-				Settings.setDay(String.valueOf(day));
+				Settings.put("day",String.valueOf(day));
 			}else{
 				tip = "周期开始日期不正确";
 			}
