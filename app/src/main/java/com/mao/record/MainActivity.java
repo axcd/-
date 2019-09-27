@@ -8,7 +8,7 @@ import android.widget.AdapterView.*;
 import android.view.*;
 import android.content.*;
 import android.widget.PopupMenu.*;
-import com.mao.record.vw.CalendarView;
+import com.mao.record.view.CalendarView;
 import com.mao.record.io.FileManager;
 import com.mao.record.io.Log;
 

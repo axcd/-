@@ -8,7 +8,7 @@ import android.view.View.*;
 import android.widget.TextView.*;
 import android.text.*;
 import java.util.*;
-import com.mao.record.vw.*;
+import com.mao.record.view.*;
 import com.mao.record.settings.*;
 
 public class SubActivity extends Activity
@@ -66,10 +66,6 @@ public class SubActivity extends Activity
 		if(Settings.get("diff")!=null){
 			editTexts[6].setText(Settings.get("diff"));
 		}
-	//	editTexts[7].setText(Settings.get());
-	//	editTexts[8].setText(Settings.get());
-	//	editTexts[9].setText(Settings.get());
-	//	editTexts[10].setText(Settings.get());
 		editTexts[11].setText(del(String.valueOf(off)));
 		editTexts[12].setText(del(String.valueOf(leave)));
 		editTexts[13].setText(del(String.valueOf(sick)));
@@ -79,8 +75,6 @@ public class SubActivity extends Activity
 		if(Settings.get("fund")!=null){
 			editTexts[15].setText(Settings.get("fund"));
 		}
-	//	editTexts[16].setText(Settings.get());
-	//	editTexts[17].setText(Settings.get());
 		
 		editText.setText(getStr());
 		for(int i=0;i<editTexts.length;i++){

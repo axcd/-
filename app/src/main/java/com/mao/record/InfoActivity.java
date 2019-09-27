@@ -8,24 +8,11 @@ import android.widget.*;
 import java.util.*;
 import android.widget.AdapterView.*;
 import android.text.*;
-import com.mao.record.vw.*;
+import com.mao.record.view.*;
 
 public class InfoActivity extends Activity
 {
-	
-	private Spinner spDown1;
-	private Spinner spDown2;
-	private Spinner spDown3;
-
-	private Spinner spDown4;
-	private List<String> list1;
-	private List<String> list2;
-	private List<String> list3;
-	private List<String> list4;
-	private ArrayAdapter<String> adapter1;
-	private ArrayAdapter<String> adapter2;
-	private ArrayAdapter<String> adapter3;
-	private ArrayAdapter<String> adapter4;
+	private Spinner[] spinner = new Spinner[4];
 	private DayView dayView;
 
     @Override
@@ -34,75 +21,75 @@ public class InfoActivity extends Activity
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
-		dayView = MainActivity.getCalendarView().getDayView();
-
-		spDown1=(Spinner) findViewById(R.id.calendarviewSpinner1);
-		list1=new ArrayList<String>();
-		list1.add("白班");
-		list1.add("夜班");
-		list1.add("休息");
-		adapter1=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list1);
-		adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spDown1.setAdapter(adapter1);
-		
-		spDown2=(Spinner) findViewById(R.id.calendarviewSpinner2);
-		list2=new ArrayList<String>();
-		list2.add("0h");
-		list2.add("0.5h");
-		list2.add("1h");
-		list2.add("1.5h");
-		list2.add("2h");
-		list2.add("2.5h");
-		list2.add("3h");
-		list2.add("3.5h");
-		list2.add("4h");
-		list2.add("4.5h");
-		list2.add("5h");
-		list2.add("5.5h");
-		list2.add("6h");
-		list2.add("6.5h");
-		list2.add("7h");
-		list2.add("7.5h");
-		list2.add("8h");
-		list2.add("8.5h");
-		list2.add("9h");
-		list2.add("9.5h");
-		list2.add("10h");
-		list2.add("10.5h");
-		list2.add("11h");
-		list2.add("11.5h");
-		list2.add("12h");
-		list2.add("12.5h");
-		adapter2=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list2);
-		adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spDown2.setAdapter(adapter2);
-		spDown2.setSelection(6);
+		bind();
+		setSpinner();
+	}
 	
-		spDown3=(Spinner) findViewById(R.id.calendarviewSpinner3);
-		list3=new ArrayList<String>();
-		list3.add("1.5倍");
-		list3.add("2.0倍");
-		list3.add("3.0倍");
-		adapter3 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list3);
-		adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spDown3.setAdapter(adapter3);
+	public void setSpinner(){
+		List<String> list=new ArrayList<String>();
+		list.add("白班");
+		list.add("夜班");
+		list.add("休息");
+		setAdapter(0,list);
+	
+		list=new ArrayList<String>();
+		list.add("0h");
+		list.add("0.5h");
+		list.add("1h");
+		list.add("1.5h");
+		list.add("2h");
+		list.add("2.5h");
+		list.add("3h");
+		list.add("3.5h");
+		list.add("4h");
+		list.add("4.5h");
+		list.add("5h");
+		list.add("5.5h");
+		list.add("6h");
+		list.add("6.5h");
+		list.add("7h");
+		list.add("7.5h");
+		list.add("8h");
+		list.add("8.5h");
+		list.add("9h");
+		list.add("9.5h");
+		list.add("10h");
+		list.add("10.5h");
+		list.add("11h");
+		list.add("11.5h");
+		list.add("12h");
+		list.add("12.5h");
+		setAdapter(1,list);
+		spinner[1].setSelection(6);
+	
+		list=new ArrayList<String>();
+		list.add("1.5倍");
+		list.add("2.0倍");
+		list.add("3.0倍");
+		setAdapter(2,list);
 		
-		spDown4=(Spinner) findViewById(R.id.calendarviewSpinner4);
-		list4=new ArrayList<String>();
-		list4.add("加班");
-		list4.add("调休");
-		list4.add("事假");
-		list4.add("病假");
-		list4.add("年休");
-		adapter4 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list4);
-		adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spDown4.setAdapter(adapter4);
-		
-		setSpinnerValue(spDown1,dayView.getInfoByIndex(1));
-		setSpinnerValue(spDown2,dayView.getInfoByIndex(2));
-		setSpinnerValue(spDown3,dayView.getInfoByIndex(3));
-		setSpinnerValue(spDown4,dayView.getInfoByIndex(4));
-
+		list = new ArrayList<String>();
+		list.add("加班");
+		list.add("调休");
+		list.add("事假");
+		list.add("病假");
+		list.add("年休");
+		setAdapter(3,list);
+	}
+	
+	public void bind(){
+		dayView = MainActivity.getCalendarView().getDayView();
+		spinner[0]=(Spinner) findViewById(R.id.calendarviewSpinner1);
+		spinner[1]=(Spinner) findViewById(R.id.calendarviewSpinner2);
+		spinner[2]=(Spinner) findViewById(R.id.calendarviewSpinner3);
+		spinner[3]=(Spinner) findViewById(R.id.calendarviewSpinner4);
+	}
+	
+	public void setAdapter(int i, List list){
+		ArrayAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list);
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinner[i].setAdapter(adapter);
+		setSpinnerValue(spinner[i],dayView.getInfoByIndex(i+1));
 	}
 
 	public void onCancel(View view){
@@ -112,13 +99,13 @@ public class InfoActivity extends Activity
 
 	public void onOk(View view){
 
-		String s1 = spDown1.getSelectedItem().toString();
+		String s1 = spinner[0].getSelectedItem().toString();
 		dayView.setInfoByIndex(1,s1);
-		String s2 = spDown2.getSelectedItem().toString();
+		String s2 = spinner[1].getSelectedItem().toString();
 		dayView.setInfoByIndex(2,s2);
-		String s3 = spDown3.getSelectedItem().toString();
+		String s3 = spinner[2].getSelectedItem().toString();
 		dayView.setInfoByIndex(3,s3);
-		String s4 = spDown4.getSelectedItem().toString();
+		String s4 = spinner[3].getSelectedItem().toString();
 		dayView.setInfoByIndex(4,s4);
 		
 		MainActivity.getCalendarView().updateInfos(dayView.getInfoString());

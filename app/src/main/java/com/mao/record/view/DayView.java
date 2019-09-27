@@ -1,4 +1,4 @@
-package com.mao.record.vw;
+package com.mao.record.view;
 
 import android.widget.*;
 import android.content.*;
