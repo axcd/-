@@ -33,7 +33,6 @@ public class InfoActivity extends Activity
 		setAdapter(0,list);
 	
 		list=new ArrayList<String>();
-		list.add("0h");
 		list.add("0.5h");
 		list.add("1h");
 		list.add("1.5h");
@@ -60,7 +59,6 @@ public class InfoActivity extends Activity
 		list.add("12h");
 		list.add("12.5h");
 		setAdapter(1,list);
-		spinner[1].setSelection(6);
 	
 		list=new ArrayList<String>();
 		list.add("1.5倍");
