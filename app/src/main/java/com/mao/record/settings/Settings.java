@@ -18,7 +18,7 @@ public class Settings
 	public static void getSettings(){
 		
 		List<String> settings = new ArrayList<String>();
-		FileManager.ReadFile(filename,settings);
+		FileManager.ReadFile("",filename,settings);
 		
 		for(String tmp:settings){
 			String[] setting = tmp.split(":");
@@ -34,7 +34,7 @@ public class Settings
 			settings.add(key + ":" + map.get(key));
 		}
 
-		FileManager.WriteFile(filename,settings);
+		FileManager.WriteFile("",filename,settings);
 	}
 	
 }

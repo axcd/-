@@ -66,6 +66,16 @@ public class SubActivity extends Activity
 		if(Settings.get("diff")!=null){
 			editTexts[6].setText(Settings.get("diff"));
 		}
+		if(Settings.get("work")!=null){
+			editTexts[7].setText(Settings.get("work"));
+		}
+		if(Settings.get("traf")!=null){
+			editTexts[8].setText(Settings.get("traf"));
+		}
+		if(Settings.get("temp")!=null){
+			editTexts[9].setText(Settings.get("temp"));
+		}
+		
 		editTexts[11].setText(del(String.valueOf(off)));
 		editTexts[12].setText(del(String.valueOf(leave)));
 		editTexts[13].setText(del(String.valueOf(sick)));

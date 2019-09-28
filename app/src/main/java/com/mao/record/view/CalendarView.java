@@ -159,7 +159,7 @@ public class CalendarView extends LinearLayout
 			}
 			this.infos[0].add(info);
 			Collections.sort(this.infos[0]);
-			FileManager.WriteFile(filenames[0],infos[0]);
+			FileManager.WriteFile(filenames[0].substring(0,4)+"/",filenames[0],infos[0]);
 		}else{
 			for(String tmp:this.infos[1]){
 				if(tmp.split(" ")[0].equals(info.split(" ")[0])){
@@ -169,7 +169,7 @@ public class CalendarView extends LinearLayout
 			}
 			this.infos[1].add(info);
 			Collections.sort(this.infos[1]);
-			FileManager.WriteFile(filenames[1],infos[1]);
+			FileManager.WriteFile(filenames[1].substring(0,4)+"/",filenames[1],infos[1]);
 		}
 	}
 	
@@ -180,7 +180,7 @@ public class CalendarView extends LinearLayout
 	public void readInfos(){
 		for(int i=0;i<2;i++){
 			this.infos[i] = new ArrayList<String>();
-			FileManager.ReadFile(filenames[i],this.infos[i]);
+			FileManager.ReadFile(filenames[i].substring(0,4)+"/",filenames[i],this.infos[i]);
 		}
 	}
 
@@ -246,7 +246,7 @@ public class CalendarView extends LinearLayout
 				}
 			}
 			Collections.sort(this.infos[0]);
-			FileManager.WriteFile(filenames[0],infos[0]);
+			FileManager.WriteFile(filenames[0].substring(0,4)+"/",filenames[0],infos[0]);
 		}else{
 			for(String tmp:this.infos[1]){
 				if(tmp.split(" ")[0].equals(String.valueOf(day))){
@@ -255,7 +255,7 @@ public class CalendarView extends LinearLayout
 				}
 			}
 			Collections.sort(this.infos[1]);
-			FileManager.WriteFile(filenames[1],infos[1]);
+			FileManager.WriteFile(filenames[1].substring(0,4)+"/",filenames[1],infos[1]);
 		}
 	}
 	

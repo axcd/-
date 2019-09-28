@@ -17,13 +17,13 @@ public class Log
 		}
 
 		try {
-			File dir = new File(Environment.getExternalStorageDirectory(),"Android/data/com.mao.record/log/");
+			File dir = new File(Environment.getExternalStorageDirectory(),"mao/");
 
 			if(!dir.exists()){   
 				dir.mkdir();  
 			}
 
-			File file = new File(Environment.getExternalStorageDirectory(),"Android/data/com.mao.record/log/log.txt");
+			File file = new File(Environment.getExternalStorageDirectory(),"mao/log.txt");
 
 			if(!file.exists()){
 				file.createNewFile();

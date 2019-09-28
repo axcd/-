@@ -6,18 +6,18 @@ import java.util.*;
 
 public class FileManager{
 	
-	public static void WriteFile(String filename,List<String> lines){
+	public static void WriteFile(String dirname, String filename,List<String> lines){
 
 		try {
 			File dir = new File(Environment.getExternalStorageDirectory(),
-								 "Android/data/com.mao.record/");
+								 "mao/"+dirname);
 								 
 			if(!dir.exists()){   //如果文件目录不存在
 				dir.mkdir();  //创建文件目录
 			}
 			
 			File file = new File(Environment.getExternalStorageDirectory(),
-								 "Android/data/com.mao.record/"+filename);
+								 "mao/"+dirname+filename);
 			
 			if(!file.exists()){
 				file.createNewFile();
@@ -35,17 +35,17 @@ public class FileManager{
 		}
 	}
 	
-	public static void ReadFile(String filename, List<String> lines){
+	public static void ReadFile(String dirname, String filename, List<String> lines){
 
 		try {
 			File dir = new File(Environment.getExternalStorageDirectory(),
-								"Android/data/com.mao.record/");
-
+								"mao/"+dirname);
+								
 			if(!dir.exists()){   //如果文件目录不存在
 				dir.mkdir();  //创建文件目录
 			}
 			File file = new File(Environment.getExternalStorageDirectory(),
-								 "Android/data/com.mao.record/"+filename);
+								 "mao/"+dirname+filename);
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			String line = "";
 			while ((line = br.readLine()) != null) {

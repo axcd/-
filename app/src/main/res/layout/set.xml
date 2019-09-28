@@ -5,95 +5,153 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical">
 
-	<TextView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="周期开始日期"
-		android:textColor="#E1180B"
-		android:textSize="18sp"
-		android:textStyle="bold|italic"/>
+	<ScrollView
+		android:layout_height="400dp"
+		android:layout_width="match_parent">
 
-	<EditText
-		android:id="@+id/editText"
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:hint="输入1-28整数"
-		android:inputType="number"/>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
 
-	<TextView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="基本工资"
-		android:textColor="#E1180B"
-		android:textSize="18sp"
-		android:textStyle="bold|italic"/>
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="周期开始日期"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
 
-	<EditText
-		android:id="@+id/editText1"
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:hint="输入整数"
-		android:inputType="number"/>
+			<EditText
+				android:id="@+id/editText"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入1-28整数"
+				android:inputType="number"/>
 
-	<TextView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="本月绩效"
-		android:textColor="#E1180B"
-		android:textSize="18sp"
-		android:textStyle="bold|italic"/>
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="基本工资"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
 
-	<EditText
-		android:id="@+id/editText2"
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:hint="输入整数"
-		android:inputType="number"/>
+			<EditText
+				android:id="@+id/editText1"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入整数"
+				android:inputType="number"/>
 
-	<TextView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="夜班补贴"
-		android:textColor="#E1180B"
-		android:textSize="18sp"
-		android:textStyle="bold|italic"/>
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="本月绩效"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
 
-	<EditText
-		android:id="@+id/editText3"
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:hint="输入整数"
-		android:inputType="number"/>
+			<EditText
+				android:id="@+id/editText2"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入整数"
+				android:inputType="number"/>
 
-	<TextView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="社会保险"
-		android:textColor="#E1180B"
-		android:textSize="18sp"
-		android:textStyle="bold|italic"/>
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="夜班补贴"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
 
-	<EditText
-		android:id="@+id/editText4"
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:hint="输入整数"
-		android:inputType="number"/>
+			<EditText
+				android:id="@+id/editText3"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入整数"
+				android:inputType="number"/>
 
-	<TextView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="住房公积金"
-		android:textColor="#E1180B"
-		android:textSize="18sp"
-		android:textStyle="bold|italic"/>
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="社会保险"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
 
-	<EditText
-		android:id="@+id/editText5"
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:hint="输入整数"
-		android:inputType="number"/>
+			<EditText
+				android:id="@+id/editText4"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入整数"
+				android:inputType="number"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="住房公积金"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
+
+			<EditText
+				android:id="@+id/editText5"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入整数"
+				android:inputType="number"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="岗位补贴"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
+
+			<EditText
+				android:id="@+id/editText6"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入整数"
+				android:inputType="number"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="交通补贴"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
+
+			<EditText
+				android:id="@+id/editText7"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入整数"
+				android:inputType="number"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="高温补贴"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
+
+			<EditText
+				android:id="@+id/editText8"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入整数"
+				android:inputType="number"/>
+
+		</LinearLayout>
+
+	</ScrollView>
 
 	<Button
 		android:layout_height="wrap_content"

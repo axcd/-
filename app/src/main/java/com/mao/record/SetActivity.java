@@ -20,6 +20,9 @@ public class SetActivity extends Activity
 	private EditText editText3;
 	private EditText editText4;
 	private EditText editText5;;
+	private EditText editText6;
+	private EditText editText7;
+	private EditText editText8;;
 	
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -33,6 +36,9 @@ public class SetActivity extends Activity
 		editText3 = (EditText)findViewById(R.id.editText3);
 		editText4 = (EditText)findViewById(R.id.editText4);		
 		editText5 = (EditText)findViewById(R.id.editText5);		
+		editText6 = (EditText)findViewById(R.id.editText6);
+		editText7 = (EditText)findViewById(R.id.editText7);		
+		editText8 = (EditText)findViewById(R.id.editText8);		
 		
 		this.getSettings();
 	}
@@ -45,11 +51,35 @@ public class SetActivity extends Activity
 		editText3.setText(Settings.get("diff"));
 		editText4.setText(Settings.get("noun"));
 		editText5.setText(Settings.get("fund"));		
+		editText6.setText(Settings.get("work"));
+		editText7.setText(Settings.get("traf"));
+		editText8.setText(Settings.get("temp"));	
 	}
 
 	public void set(View view){
 		
 		String  tip = "修改成功";
+		
+		String temp = editText8.getText().toString();
+		if(!temp.equals("")){
+			Settings.put("temp",temp);
+		}else{
+			tip = "请输入高温补贴";
+		}
+
+		String traf = editText7.getText().toString();
+		if(!traf.equals("")){
+			Settings.put("traf",traf);
+		}else{
+			tip = "请输入交通补贴";
+		}
+
+		String work = editText6.getText().toString();
+		if(!work.equals("")){
+			Settings.put("work",work);
+		}else{
+			tip = "请输入岗位补贴";
+		}
 		
 		String fund = editText5.getText().toString();
 		if(!fund.equals("")){
