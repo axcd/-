@@ -21,15 +21,20 @@ public class FileManager{
 			
 			if(!file.exists()){
 				file.createNewFile();
+			}	
+
+			if(lines.isEmpty()){		
+				file.delete();
+			}else{
+				
+				//第二个参数意义是说是否以append方式添加内容
+				BufferedWriter bw = new BufferedWriter(new FileWriter(file, false));
+				for(String line:lines){
+					bw.write(line+"\r\n");
+				}
+				bw.flush();
 			}
 
-			//第二个参数意义是说是否以append方式添加内容
-			BufferedWriter bw = new BufferedWriter(new FileWriter(file, false));
-			for(String line:lines){
-				bw.write(line+"\r\n");
-			}
-			
-			bw.flush();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
