@@ -240,7 +240,7 @@ public class CalendarView extends LinearLayout
 		
 		if(day>=this.startDay){
 			for(String tmp:this.infos[0]){
-				if(tmp.split(" ")[0].equals(String.valueOf(day))){
+				if(tmp.split(" ")[0].equals(addZero(day))){
 					this.infos[0].remove(tmp);
 					break;
 				}
@@ -249,7 +249,7 @@ public class CalendarView extends LinearLayout
 			FileManager.WriteFile(filenames[0].substring(0,4)+"/",filenames[0],infos[0]);
 		}else{
 			for(String tmp:this.infos[1]){
-				if(tmp.split(" ")[0].equals(String.valueOf(day))){
+				if(tmp.split(" ")[0].equals(addZero(day))){
 					this.infos[1].remove(tmp);
 					break;
 				}
@@ -282,6 +282,10 @@ public class CalendarView extends LinearLayout
 		activity.startActivity(info);
 	}
 	
+	public String addZero(int day){
+		return day>9?String.valueOf(day):"0"+String.valueOf(day);
+	}
+	
 	private class CalendarAdapter extends ArrayAdapter{
 
 		private LayoutInflater inflater;
@@ -308,18 +312,18 @@ public class CalendarView extends LinearLayout
 			if(date.after(CalendarView.this.getStartDate()) && date.before(CalendarView.this.getEndDate())){
 				cv.setTextColor(Color.parseColor("#000000"));
 				cv.setText(String.valueOf(day));
-				cv.setInfoByIndex(0,String.valueOf(day));
+				cv.setInfoByIndex(0,addZero(day));
 				
 				if(day>=startDay){
 					for(String tmp:infos[0]){
-						if(tmp.split(" ")[0].equals(String.valueOf(day))){
+						if(tmp.split(" ")[0].equals(cv.getInfoByIndex(0))){
 							cv.setInfo(tmp.split(" "));
 							break;
 						}
 					}					
 				}else{
 					for(String tmp:infos[1]){
-						if(tmp.split(" ")[0].equals(String.valueOf(day))){
+						if(tmp.split(" ")[0].equals(cv.getInfoByIndex(0))){
 							cv.setInfo(tmp.split(" "));
 							break;
 						}
@@ -348,7 +352,7 @@ public class CalendarView extends LinearLayout
 				
 			cv.setOnLongClickListener( new OnLongClickListener(){
 				public boolean onLongClick(View view){
-					String[] info = {String.valueOf(day),"","","",""};
+					String[] info = {cv.getInfoByIndex(0),"","","",""};
 					cv.setInfo(info);
 					clearDay(day);
 					setSelect(cv);
