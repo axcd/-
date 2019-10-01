@@ -148,6 +148,21 @@
 				android:layout_width="match_parent"
 				android:hint="输入整数"
 				android:inputType="number"/>
+			
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="累计扣除"
+				android:textColor="#E1180B"
+				android:textSize="18sp"
+				android:textStyle="bold|italic"/>
+
+			<EditText
+				android:id="@+id/editText9"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="输入整数"
+				android:inputType="number"/>
 
 		</LinearLayout>
 

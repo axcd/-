@@ -23,6 +23,7 @@ public class SetActivity extends Activity
 	private EditText editText6;
 	private EditText editText7;
 	private EditText editText8;;
+	private EditText editText9;;
 	
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -39,6 +40,7 @@ public class SetActivity extends Activity
 		editText6 = (EditText)findViewById(R.id.editText6);
 		editText7 = (EditText)findViewById(R.id.editText7);		
 		editText8 = (EditText)findViewById(R.id.editText8);		
+		editText9 = (EditText)findViewById(R.id.editText9);	
 		
 		this.getSettings();
 	}
@@ -53,12 +55,20 @@ public class SetActivity extends Activity
 		editText5.setText(Settings.get("fund"));		
 		editText6.setText(Settings.get("work"));
 		editText7.setText(Settings.get("traf"));
-		editText8.setText(Settings.get("temp"));	
+		editText8.setText(Settings.get("temp"));
+		editText9.setText(Settings.get("atax"));	
 	}
 
 	public void set(View view){
 		
 		String  tip = "修改成功";
+		
+		String atax = editText9.getText().toString();
+		if(!atax.equals("")){
+			Settings.put("atax",atax);
+		}else{
+			tip = "请输入累计扣除";
+		}
 		
 		String temp = editText8.getText().toString();
 		if(!temp.equals("")){
