@@ -49,19 +49,19 @@ public class DayView extends TextView
 			
 			//画班别
 			if(info[4].contains("调休")){
-				drawShift(canvas,"#FF0000",100,"#0000FF","调");
+				drawShift(canvas,"#FF0000",80,"#0000FF","调");
 			}else if(info[4].contains("事假")){
-				drawShift(canvas,"#FF0000",100,"#0000FF","事");
+				drawShift(canvas,"#FF0000",80,"#0000FF","事");
 			}else if(info[4].contains("病假")){
-				drawShift(canvas,"#FF0000",100,"#0000FF","病");
+				drawShift(canvas,"#FF0000",80,"#0000FF","病");
 			}else if(info[4].contains("年休")){
-				drawShift(canvas,"#FF0000",100,"#0000FF","年");
+				drawShift(canvas,"#FF0000",80,"#0000FF","年");
 			}else if(info[1].contains("夜班")){
-				drawShift(canvas,"#FF0000",120,"#000000","夜");
+				drawShift(canvas,"#0000FF",255,"#FFFFFF","夜");
 			}else if(info[1].contains("白班")){
-				drawShift(canvas,"#FF0000",150,"#FFFFFF","白");
+				drawShift(canvas,"#FF0000",255,"#FFFFFF","白");
 			}else if(info[1].contains("休息")){
-				drawShift(canvas,"#FF0000",200,"#0000FF","休");
+				drawShift(canvas,"#0F0F0F",255,"#F0F0F0","休");
 			}
 
 			//画小时和倍数
