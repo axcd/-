@@ -7,8 +7,10 @@ import android.content.*;
 import android.widget.*;
 import java.util.*;
 import android.widget.AdapterView.*;
+import android.view.WindowManager.*;
 import android.text.*;
 import com.mao.record.view.*;
+import android.transition.*;
 
 public class InfoActivity extends Activity
 {
@@ -20,7 +22,17 @@ public class InfoActivity extends Activity
     {	
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.info);
+		setContentView(R.layout.info);
+	
+		Display display = getWindowManager().getDefaultDisplay(); 
+		Window window = getWindow();	
+		LayoutParams windowLayoutParams = window.getAttributes(); 
+		windowLayoutParams.width = (int) (display.getWidth()*1.0); 
+		windowLayoutParams.height = (int) (display.getHeight()*0.7); 	
+		window.setGravity(Gravity.BOTTOM);	
+		window.setWindowAnimations(R.style.MyDialogAnimation);
+	
+		setFinishOnTouchOutside(false);	
 		bind();
 		setSpinner();
 	}
@@ -91,6 +103,15 @@ public class InfoActivity extends Activity
 		setSpinnerValue(spinner[i],dayView.getInfoByIndex(i+1));
 	}
 
+	@Override
+	public void finish()
+	{
+		super.finish();
+		overridePendingTransition(R.anim.dialog_exit,0); 
+	}
+	
+	
+
 	public void onCancel(View view){
 		finish();
 	}
@@ -109,7 +130,8 @@ public class InfoActivity extends Activity
 		
 		MainActivity.getCalendarView().updateInfos(dayView.getInfoString());
 		dayView.invalidate();
-		finish();
+		
+		finish(); 
 	}
 
 	private void setSpinnerValue(Spinner spinner, String value) {

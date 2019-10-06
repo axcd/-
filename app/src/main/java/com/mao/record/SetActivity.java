@@ -30,6 +30,7 @@ public class SetActivity extends Activity
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set);
+		setFinishOnTouchOutside(false);	
 		
 		editText = (EditText)findViewById(R.id.editText);
 		editText1 = (EditText)findViewById(R.id.editText1);

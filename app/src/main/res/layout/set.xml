@@ -152,7 +152,7 @@
 			<TextView
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
-				android:text="累计扣除"
+				android:text="专项附加扣除"
 				android:textColor="#E1180B"
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
