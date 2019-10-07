@@ -2,6 +2,7 @@
 <resources>
     <style name="MyDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">	
 		<item name="android:windowBackground">@drawable/my_bg</item>
+		<item name="android:windowNoTitle">false</item>
 	</style>
 	
 	<style name="MyDialogAnimation" parent="android:Animation">

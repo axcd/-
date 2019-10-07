@@ -28,7 +28,7 @@ public class InfoActivity extends Activity
 		Window window = getWindow();	
 		LayoutParams windowLayoutParams = window.getAttributes(); 
 		windowLayoutParams.width = (int) (display.getWidth()*1.0); 
-		windowLayoutParams.height = (int) (display.getHeight()*0.7); 	
+		windowLayoutParams.height = (int) (display.getHeight()*0.65); 	
 		window.setGravity(Gravity.BOTTOM);	
 		window.setWindowAnimations(R.style.MyDialogAnimation);
 	

@@ -16,10 +16,10 @@
 # view res/layout/day_view.xml #generated:2
 -keep class com.mao.record.view.DayView { <init>(...); }
 
-# onClick res/layout/info.xml #generated:119
+# onClick res/layout/info.xml #generated:120
 -keepclassmembers class * { *** onCancel(...); }
 
-# onClick res/layout/info.xml #generated:127
+# onClick res/layout/info.xml #generated:129
 -keepclassmembers class * { *** onOk(...); }
 
 # onClick res/layout/set.xml #generated:171
