@@ -59,11 +59,11 @@ public class MainActivity extends Activity
 				Intent set = new Intent(MainActivity.this,SetActivity.class);
 				startActivity(set);
 				return true;
-			case R.id.mainMenuShare:
-				Intent intent = new Intent(Intent.ACTION_SEND);
-				intent.setType("*/*");
-				intent.putExtra(Intent.EXTRA_STREAM, getApplicationContext().getPackageCodePath()); 
-				startActivity(intent);
+			case R.id.mainMenuAbout:
+//				Intent intent = new Intent(Intent.ACTION_SEND);
+//				intent.setType("*/*");
+//				intent.putExtra(Intent.EXTRA_STREAM, getApplicationContext().getPackageCodePath()); 
+//				startActivity(intent);
 				return true;
 			case R.id.mainMenuExit:
 				finish();

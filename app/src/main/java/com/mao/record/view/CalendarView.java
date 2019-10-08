@@ -336,9 +336,7 @@ public class CalendarView extends LinearLayout
 
 			if(now.getDate() == date.getDate() && now.getMonth() == date.getMonth() && now.getYear() == date.getYear()){
 				cv.setTextColor(Color.parseColor("#FF0000"));
-				cv.isToday = true;
-				setSelect(cv);
-				
+				cv.isToday = true;			
 			}
 			
 			cv.setOnClickListener(new OnClickListener(){		

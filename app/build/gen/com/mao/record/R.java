@@ -53,9 +53,9 @@ public final class R {
         public static final int h3=0x7f09001d;
         public static final int header=0x7f090000;
         public static final int mainEditText=0x7f090016;
+        public static final int mainMenuAbout=0x7f09002b;
         public static final int mainMenuExit=0x7f09002c;
         public static final int mainMenuSet=0x7f09002a;
-        public static final int mainMenuShare=0x7f09002b;
         public static final int mainMenuSub=0x7f090029;
         public static final int next=0x7f090003;
         public static final int night_allowance=0x7f09001f;
@@ -87,8 +87,7 @@ public final class R {
         public static final int hello_world=0x7f060001;
     }
     public static final class style {
-        public static final int AppTheme=0x7f070003;
-        public static final int DialogTheme=0x7f070002;
+        public static final int AppTheme=0x7f070002;
         public static final int MyDialogAnimation=0x7f070001;
         public static final int MyDialogTheme=0x7f070000;
     }

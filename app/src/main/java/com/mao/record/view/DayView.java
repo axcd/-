@@ -46,28 +46,16 @@ public class DayView extends TextView
 		canvas.translate(w,h);
 
 		if(!getText().toString().equals("")){
-			
-			//画班别
-			if(info[4].contains("调休")){
-				drawShift(canvas,"#8000FF",200,"#FFFFFF","调");
-			}else if(info[4].contains("事假")){
-				drawShift(canvas,"#8000FF",200,"#FFFFF0","事");
-			}else if(info[4].contains("病假")){
-				drawShift(canvas,"#8000FF",200,"#FFFFF0","病");
-			}else if(info[4].contains("年休")){
-				drawShift(canvas,"#8000FF",200,"#FFFFF0","年");
-			}else if(info[1].contains("夜班")){
-				drawShift(canvas,"#0000FF",200,"#FFFFF0","夜");
-			}else if(info[1].contains("白班")){
-				drawShift(canvas,"#F0000F",200,"#FFFFF0","白");
-			}else if(info[1].contains("休息")){
+			if(info[1].equals("休息")){
+				drawRect(canvas,1-w,h/2,w-1,h,"#0000FF",50);
 				drawShift(canvas,"#0F0F0F",200,"#F0F0F0","休");
-			}
-
-			//画小时和倍数
-			if(!info[2].equals("") && !info[1].equals("休息")){
-				drawHour(canvas,info[2],"#000000",255);
+			}else if(info[4].equals("加班")){
 				drawRect(canvas,1-w,h/2,w-1,h,"#F0000F",30);
+				if(info[1].contains("白班")){
+					drawShift(canvas,"#F0000F",200,"#FFFFF0","白");
+				}else if(info[1].contains("夜班")){
+					drawShift(canvas,"#0000FF",200,"#FFFFF0","夜");
+				}
 				if(info[3].equals("1.5倍")){
 					drawHour(canvas,info[2],"#0000FF",255);
 				}else if(info[3].equals("2.0倍")){
@@ -75,9 +63,10 @@ public class DayView extends TextView
 				}else if(info[3].equals("3.0倍")){
 					drawHour(canvas,info[2],"#FF0FF0",255);
 				}
-				if(!info[4].equals("加班")){
-					drawHour(canvas,info[2],"#666666",255);
-				}
+			}else if(!info[4].equals("")){
+				drawRect(canvas,1-w,h/2,w-1,h,"#0000FF",50);
+				drawShift(canvas,"#7000FF",200,"#FFFFF0",info[4]);
+				drawHour(canvas,info[2],"#666666",255);
 			}
 			
 			//标记今天
@@ -117,7 +106,7 @@ public class DayView extends TextView
 	
 	public void drawHour(Canvas canvas, String h, String hcolor, int alpha){
 		
-		int x,y=55;
+		int x,y=getHeight()/2-5;
 		if(h.length()==2){
 			x=-13;
 			paint.setTextSize(25f);
