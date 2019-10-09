@@ -65,7 +65,6 @@ public class DayView extends TextView
 				}
 			}else if(!info[4].equals("")){
 				drawRect(canvas,1-w,h/2,w-1,h,"#0000FF",50);
-//				drawShift(canvas,"#700FF0",200,"#FFFFFF",info[4]);
 				if(info[1].contains("白班")){
 					drawShift(canvas,"#F0000F",200,"#FFFFF0",info[4]);
 				}else if(info[1].contains("夜班")){
@@ -82,8 +81,6 @@ public class DayView extends TextView
 			//标记选中
 			if(isSelected){
 				drawCircle(canvas,"#0000FF",60);
-			}else{
-				//drawRect(canvas,-44,-57,44,60,"#CCCCCC",80);
 			}
 			drawRect(canvas,1-w,3-h,w-1,h,"#CCCCCC",80);
 		}else{

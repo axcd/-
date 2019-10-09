@@ -349,8 +349,10 @@ public class CalendarView extends LinearLayout
 				
 			cv.setOnLongClickListener( new OnLongClickListener(){
 				public boolean onLongClick(View view){
-					setSelect(cv);
-					openDailog();
+					if(!cv.getText().toString().equals("")){
+						setSelect(cv);
+						openDailog();
+					}
 					return true;
 				}
 			});
