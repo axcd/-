@@ -17,10 +17,10 @@
 -keep class com.mao.record.view.DayView { <init>(...); }
 
 # onClick res/layout/info.xml #generated:120
--keepclassmembers class * { *** onCancel(...); }
+-keepclassmembers class * { *** onDelete(...); }
 
 # onClick res/layout/info.xml #generated:129
--keepclassmembers class * { *** onOk(...); }
+-keepclassmembers class * { *** onInsert(...); }
 
 # onClick res/layout/set.xml #generated:171
 -keepclassmembers class * { *** set(...); }

@@ -120,18 +120,18 @@
 		<Button
 			android:layout_height="wrap_content"
 			android:layout_width="100dp"
-			android:text="取消"
+			android:text="删除"
 			android:layout_gravity="left"
 			android:layout_marginRight="25dp"
-			android:onClick="onCancel"
+			android:onClick="onDelete"
 			android:shadowRadius="5.0"/>
 
 		<Button
 			android:layout_height="wrap_content"
 			android:layout_width="100dp"
-			android:text="确认"
+			android:text="增加"
 			android:layout_marginLeft="25dp"
-			android:onClick="onOk"
+			android:onClick="onInsert"
 			android:shadowRadius="5.0"/>
 
 	</LinearLayout>

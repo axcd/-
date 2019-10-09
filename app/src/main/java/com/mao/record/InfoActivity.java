@@ -112,12 +112,18 @@ public class InfoActivity extends Activity
 	
 	
 
-	public void onCancel(View view){
+	public void onDelete(View view){
+		MainActivity.getCalendarView().clearDay(Integer.parseInt(dayView.getInfoByIndex(0)));
+		dayView.setInfoByIndex(1,"");
+		dayView.setInfoByIndex(2,"");
+		dayView.setInfoByIndex(3,"");
+		dayView.setInfoByIndex(4,"");
+		dayView.invalidate();
 		finish();
 	}
 	
 
-	public void onOk(View view){
+	public void onInsert(View view){
 
 		String s1 = spinner[0].getSelectedItem().toString();
 		dayView.setInfoByIndex(1,s1);

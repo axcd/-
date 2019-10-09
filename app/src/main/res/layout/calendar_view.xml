@@ -124,7 +124,7 @@
 			android:layout_width="match_parent"
 			android:textSize="15sp"
 			android:textColor="#FFEB2621"
-			android:text="提示：长按可删除该天加班信息"/>
+			android:text="提示：长按可编辑该天加班信息"/>
 
 	</LinearLayout>
 

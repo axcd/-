@@ -47,7 +47,7 @@ public class DayView extends TextView
 
 		if(!getText().toString().equals("")){
 			if(info[1].equals("休息")){
-				drawRect(canvas,1-w,h/2,w-1,h,"#0000FF",50);
+				drawRect(canvas,1-w,h/2,w-1,h,"#00F00F",50);
 				drawShift(canvas,"#0F0F0F",200,"#F0F0F0","休");
 			}else if(info[4].equals("加班")){
 				drawRect(canvas,1-w,h/2,w-1,h,"#F0000F",30);
@@ -65,7 +65,12 @@ public class DayView extends TextView
 				}
 			}else if(!info[4].equals("")){
 				drawRect(canvas,1-w,h/2,w-1,h,"#0000FF",50);
-				drawShift(canvas,"#7000FF",200,"#FFFFF0",info[4]);
+//				drawShift(canvas,"#700FF0",200,"#FFFFFF",info[4]);
+				if(info[1].contains("白班")){
+					drawShift(canvas,"#F0000F",200,"#FFFFF0",info[4]);
+				}else if(info[1].contains("夜班")){
+					drawShift(canvas,"#0000FF",200,"#FFFFF0",info[4]);
+				}
 				drawHour(canvas,info[2],"#666666",255);
 			}
 			
