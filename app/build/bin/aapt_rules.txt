@@ -1,3 +1,6 @@
+# view AndroidManifest.xml #generated:64
+-keep class com.mao.record.AboutActivity { <init>(...); }
+
 # view AndroidManifest.xml #generated:50
 -keep class com.mao.record.InfoActivity { <init>(...); }
 
@@ -21,6 +24,9 @@
 
 # onClick res/layout/info.xml #generated:129
 -keepclassmembers class * { *** onInsert(...); }
+
+# onClick res/layout/about.xml #generated:15
+-keepclassmembers class * { *** onOK(...); }
 
 # onClick res/layout/set.xml #generated:171
 -keepclassmembers class * { *** set(...); }

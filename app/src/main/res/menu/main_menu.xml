@@ -10,7 +10,7 @@
     <item
 		android:id="@+id/mainMenuAbout"
 		android:title="关于"/>
-    <item
+    <!--<item
 		android:id="@+id/mainMenuExit"
-		android:title="退出"/>
+		android:title="退出"/>-->
 </menu>

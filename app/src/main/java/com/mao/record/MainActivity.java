@@ -60,15 +60,10 @@ public class MainActivity extends Activity
 				startActivity(set);
 				return true;
 			case R.id.mainMenuAbout:
-//				Intent intent = new Intent(Intent.ACTION_SEND);
-//				intent.setType("*/*");
-//				intent.putExtra(Intent.EXTRA_STREAM, getApplicationContext().getPackageCodePath()); 
-//				startActivity(intent);
+				Intent about = new Intent(this,AboutActivity.class);
+				startActivity(about);
 				return true;
-			case R.id.mainMenuExit:
-				finish();
-				return true;
-				
+
 		}
 		return super.onOptionsItemSelected(item);
 	}

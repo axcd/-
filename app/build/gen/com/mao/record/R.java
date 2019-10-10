@@ -54,7 +54,6 @@ public final class R {
         public static final int header=0x7f090000;
         public static final int mainEditText=0x7f090016;
         public static final int mainMenuAbout=0x7f09002b;
-        public static final int mainMenuExit=0x7f09002c;
         public static final int mainMenuSet=0x7f09002a;
         public static final int mainMenuSub=0x7f090029;
         public static final int next=0x7f090003;
@@ -72,19 +71,20 @@ public final class R {
         public static final int work_allowance=0x7f090021;
     }
     public static final class layout {
-        public static final int calendar_view=0x7f030000;
-        public static final int day_view=0x7f030001;
-        public static final int info=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int set=0x7f030004;
-        public static final int sub=0x7f030005;
+        public static final int about=0x7f030000;
+        public static final int calendar_view=0x7f030001;
+        public static final int day_view=0x7f030002;
+        public static final int info=0x7f030003;
+        public static final int main=0x7f030004;
+        public static final int set=0x7f030005;
+        public static final int sub=0x7f030006;
     }
     public static final class menu {
         public static final int main_menu=0x7f080000;
     }
     public static final class string {
+        public static final int about=0x7f060001;
         public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060001;
     }
     public static final class style {
         public static final int AppTheme=0x7f070002;
