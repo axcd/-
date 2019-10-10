@@ -15,6 +15,7 @@ import android.os.*;
 import android.app.*;
 import com.mao.record.settings.*;
 import com.mao.record.io.FileManager;
+import com.mao.record.io.Log;
 import com.mao.record.*;
 
 public class CalendarView extends LinearLayout
@@ -98,13 +99,11 @@ public class CalendarView extends LinearLayout
 	
 	public void renderCalendar(){
 		
-		//设置日历开始结束日期
-		if(Settings.get("day")!=null){
-			startDay = Integer.parseInt(Settings.get("day"));
-		}
 		Calendar calendar = (Calendar)curDate.clone();	
 		calendar.add(Calendar.MONTH,-1);
 		calendar.set(Calendar.DAY_OF_MONTH,startDay);
+		
+		//设置日历开始结束日期
 		this.setStartDate(calendar);
 		this.setEndDate(calendar);
 		
@@ -115,17 +114,15 @@ public class CalendarView extends LinearLayout
 		this.setFilenames(calendar);
 		this.readInfos();
 
-		//设置数组开始日期
-		int preDays = calendar.get(Calendar.DAY_OF_WEEK)-1;
-		calendar.add(Calendar.DAY_OF_MONTH,-preDays);
-		
 		//设置数组长度
 		int preMonthDays = calendar.getActualMaximum(calendar.DATE);
+		int preDays = calendar.get(Calendar.DAY_OF_WEEK)-1;
 		int maxDate = preMonthDays+preDays;
 		int maxCellCount = (int)Math.ceil(maxDate/7.0)*7;
 		
 		//填充数组
 		ArrayList<Date> cells = new ArrayList<>();
+		calendar.add(Calendar.DAY_OF_MONTH,-preDays);
 		while(cells.size()<maxCellCount)
 		{ 
 			cells.add(calendar.getTime());
