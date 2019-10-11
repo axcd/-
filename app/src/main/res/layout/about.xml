@@ -10,7 +10,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="300dp"
 		android:text="@string/about"
-		android:textSize="20sp"/>
+		android:textSize="20sp"
+		android:textStyle="normal"/>
 
 	<Button
 		android:layout_height="wrap_content"

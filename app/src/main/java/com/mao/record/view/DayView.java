@@ -47,10 +47,10 @@ public class DayView extends TextView
 
 		if(!getText().toString().equals("")){
 			if(info[1].equals("休息")){
-				drawRect(canvas,1-w,h/2,w-1,h,"#00F00F",50);
+				drawRect(canvas,3-w,h/2,w-2,h,"#00F00F",50);
 				drawShift(canvas,"#0F0F0F",200,"#F0F0F0","休");
 			}else if(info[4].equals("加班")){
-				drawRect(canvas,1-w,h/2,w-1,h,"#F0000F",30);
+				drawRect(canvas,3-w,h/2,w-2,h,"#F0000F",30);
 				if(info[1].contains("白班")){
 					drawShift(canvas,"#F0000F",200,"#FFFFF0","白");
 				}else if(info[1].contains("夜班")){
@@ -64,7 +64,7 @@ public class DayView extends TextView
 					drawHour(canvas,info[2],"#FF0FF0",255);
 				}
 			}else if(!info[4].equals("")){
-				drawRect(canvas,1-w,h/2,w-1,h,"#0000FF",50);
+				drawRect(canvas,3-w,h/2,w-2,h,"#0000FF",50);
 				if(info[1].contains("白班")){
 					drawShift(canvas,"#F0000F",200,"#FFFFF0",info[4]);
 				}else if(info[1].contains("夜班")){
@@ -82,7 +82,9 @@ public class DayView extends TextView
 			if(isSelected){
 				drawCircle(canvas,"#0000FF",60);
 			}
-			drawRect(canvas,1-w,3-h,w-1,h,"#CCCCCC",80);
+			drawRect(canvas,3-w,3-h,w-2,h,"#999999",50);
+			drawRect(canvas,w-2,3-h,w,h,"#000000",80);
+			drawRect(canvas,3-w,h-2,w,h,"#000000",80);
 		}else{
 			drawRect(canvas,1-w,3-h,w-1,h,"#666666",40);
 		}
@@ -131,7 +133,7 @@ public class DayView extends TextView
 	public void drawCircle(Canvas canvas,String bkgColor,int alpha){
 		paint.setColor(Color.parseColor(bkgColor));
 		paint.setAlpha(alpha);
-		canvas.drawCircle(0,0,w>h?h:w,paint);
+		canvas.drawCircle(0,0,w>h?h-2:w-2,paint);
 	}
 	
 	public void setInfo(String[] info){
