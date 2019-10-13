@@ -47,14 +47,14 @@ public class DayView extends TextView
 
 		if(!getText().toString().equals("")){
 			if(info[1].equals("休息")){
-				drawRect(canvas,3-w,h/2,w-2,h,"#00F00F",50);
+				drawRect(canvas,3-w,h/2,w-2,h,"#00F00F",40);
 				drawShift(canvas,"#0F0F0F",200,"#F0F0F0","休");
 			}else if(info[4].equals("加班")){
-				drawRect(canvas,3-w,h/2,w-2,h,"#F0000F",30);
+				drawRect(canvas,3-w,h/2,w-2,h,"#F0000F",20);
 				if(info[1].contains("白班")){
-					drawShift(canvas,"#F0000F",200,"#FFFFF0","白");
+					drawShift(canvas,"#F0000F",150,"#FFFFF0","白");
 				}else if(info[1].contains("夜班")){
-					drawShift(canvas,"#0000FF",200,"#FFFFF0","夜");
+					drawShift(canvas,"#0000FF",150,"#FFFFF0","夜");
 				}
 				if(info[3].equals("1.5倍")){
 					drawHour(canvas,info[2],"#0000FF",255);
@@ -64,11 +64,11 @@ public class DayView extends TextView
 					drawHour(canvas,info[2],"#FF0FF0",255);
 				}
 			}else if(!info[4].equals("")){
-				drawRect(canvas,3-w,h/2,w-2,h,"#0000FF",50);
+				drawRect(canvas,3-w,h/2,w-2,h,"#0000FF",30);
 				if(info[1].contains("白班")){
-					drawShift(canvas,"#F0000F",200,"#FFFFF0",info[4]);
+					drawShift(canvas,"#F0000F",150,"#FFFFF0",info[4]);
 				}else if(info[1].contains("夜班")){
-					drawShift(canvas,"#0000FF",200,"#FFFFF0",info[4]);
+					drawShift(canvas,"#0000FF",150,"#FFFFF0",info[4]);
 				}
 				drawHour(canvas,info[2],"#666666",255);
 			}
@@ -82,11 +82,11 @@ public class DayView extends TextView
 			if(isSelected){
 				drawCircle(canvas,"#0000FF",60);
 			}
-			drawRect(canvas,3-w,3-h,w-2,h,"#999999",50);
-			drawRect(canvas,w-2,3-h,w,h,"#000000",80);
-			drawRect(canvas,3-w,h-2,w,h,"#000000",80);
+			drawRect(canvas,4-w,3-h,w-2,h,"#999999",80);
+			drawRect(canvas,w-2,3-h,w+1,h,"#000000",80);
+			drawRect(canvas,3-w,h-3,w,h,"#000000",80);
 		}else{
-			drawRect(canvas,1-w,3-h,w-1,h,"#666666",40);
+			drawRect(canvas,4-w,3-h,w+1,h,"#222222",80);
 		}
 	}
 	
@@ -102,10 +102,10 @@ public class DayView extends TextView
 		
 		paint.setColor(Color.parseColor(bkgColor));
 		paint.setAlpha(alpha);
-		canvas.drawCircle(17-w,20-h,13,paint);	
+		canvas.drawCircle(17-w,19-h,13,paint);	
 		paint.setColor(Color.parseColor(fontColor));
 		paint.setTextSize(18f);
-		canvas.drawText(shift,0,1,8-w,25-h,paint);	
+		canvas.drawText(shift,0,1,8-w,24-h,paint);	
 	}
 	
 	public void drawHour(Canvas canvas, String h, String hcolor, int alpha){

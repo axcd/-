@@ -45,7 +45,8 @@
 		android:orientation="horizontal"
 		android:layout_marginLeft="10dp"
 		android:layout_marginRight="10dp"
-		android:background="#5000FF00">
+		android:background="#5000FF00"
+		android:baselineAligned="true">
 
 		<TextView
 			android:layout_width="0dp"
