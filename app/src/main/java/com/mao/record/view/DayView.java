@@ -108,25 +108,14 @@ public class DayView extends TextView
 		canvas.drawText(shift,0,1,8-w,24-h,paint);	
 	}
 	
-	public void drawHour(Canvas canvas, String h, String hcolor, int alpha){
+	public void drawHour(Canvas canvas, String hour, String hcolor, int alpha){
 		
-		int x,y=getHeight()/2-5;
-		if(h.length()==2){
-			x=-13;
-			paint.setTextSize(25f);
-		}else if(h.length()==3){
-			x=-21;
-			paint.setTextSize(25f);
-		}else if(h.length()==4){
-			x=-25;
-			paint.setTextSize(25f);
-		}else{
-			x=-32;
-			paint.setTextSize(25f);
-		}
+		paint.setTextSize(30f);
+		int x = -(int)(paint.measureText(hour)/2);
+		int y=getHeight()/2-5;
 		paint.setColor(Color.parseColor(hcolor));
 		paint.setAlpha(alpha);
-		canvas.drawText(h,x,y,paint);
+		canvas.drawText(hour,x,y,paint);
 		
 	}
 	
