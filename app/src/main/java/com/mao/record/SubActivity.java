@@ -120,6 +120,9 @@ public class SubActivity extends Activity
 							editText0.setText(s.substring(0,s.length()-1));
 							editText0.setSelection(s.length()-1);
 						}
+						if(s.equals("")){
+							editText0.setText("0");
+						}
 					}
 				}
 			});

@@ -82,7 +82,7 @@ public class DayView extends TextView
 			if(isSelected){
 				drawCircle(canvas,"#0000FF",60);
 			}
-			drawRect(canvas,4-w,3-h,w-2,h,"#999999",80);
+			drawRect(canvas,4-w,3-h,w+1,h,"#999999",80);
 			drawRect(canvas,w-2,3-h,w+1,h,"#000000",80);
 			drawRect(canvas,3-w,h-3,w,h,"#000000",80);
 		}else{
@@ -91,32 +91,30 @@ public class DayView extends TextView
 	}
 	
 	public void drawRect(Canvas canvas,int x1,int y1,int x2,int y2,String color,int alpha){
-		
 		paint.setColor(Color.parseColor(color));
 		paint.setAlpha(alpha);
-		canvas.drawRect(x1,y1,x2,y2,paint);
-		
+		canvas.drawRect(x1,y1,x2,y2,paint);	
 	}
 	
 	public void drawShift(Canvas canvas,String bkgColor,int alpha,String fontColor,String shift){
-		
+		paint.setTextSize(21f);
+		int x = (int)paint.measureText(shift.substring(0,1))/2;
+		int y = (int) Math.abs(paint.ascent() + paint.descent())/2;
+		int r = (int)Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
 		paint.setColor(Color.parseColor(bkgColor));
 		paint.setAlpha(alpha);
-		canvas.drawCircle(17-w,19-h,13,paint);	
+		canvas.drawCircle(r-w+5,r-h+5,r+2,paint);	
 		paint.setColor(Color.parseColor(fontColor));
-		paint.setTextSize(18f);
-		canvas.drawText(shift,0,1,8-w,24-h,paint);	
+		canvas.drawText(shift,0,1,r-w-x+5,r-h+y+5,paint);	
 	}
 	
 	public void drawHour(Canvas canvas, String hour, String hcolor, int alpha){
-		
-		paint.setTextSize(30f);
-		int x = -(int)(paint.measureText(hour)/2);
-		int y=getHeight()/2-5;
+		paint.setTextSize(28f);
 		paint.setColor(Color.parseColor(hcolor));
 		paint.setAlpha(alpha);
-		canvas.drawText(hour,x,y,paint);
-		
+		int x = -(int)(paint.measureText(hour)/2);
+		int y = getHeight()/2-5;
+		canvas.drawText(hour,x,y,paint);	
 	}
 	
 	public void drawCircle(Canvas canvas,String bkgColor,int alpha){
