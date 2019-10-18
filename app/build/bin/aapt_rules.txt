@@ -25,7 +25,7 @@
 # onClick res/layout/info.xml #generated:129
 -keepclassmembers class * { *** onInsert(...); }
 
-# onClick res/layout/about.xml #generated:16
+# onClick res/layout/about.xml #generated:17
 -keepclassmembers class * { *** onOK(...); }
 
 # onClick res/layout/set.xml #generated:171

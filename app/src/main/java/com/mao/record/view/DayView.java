@@ -103,9 +103,9 @@ public class DayView extends TextView
 		int r = (int)Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
 		paint.setColor(Color.parseColor(bkgColor));
 		paint.setAlpha(alpha);
-		canvas.drawCircle(r-w+5,r-h+5,r+2,paint);	
+		canvas.drawCircle(r-w+7,r-h+7,r+2,paint);	
 		paint.setColor(Color.parseColor(fontColor));
-		canvas.drawText(shift,0,1,r-w-x+5,r-h+y+5,paint);	
+		canvas.drawText(shift,0,1,r-w-x+7,r-h+y+7,paint);	
 	}
 	
 	public void drawHour(Canvas canvas, String hour, String hcolor, int alpha){
