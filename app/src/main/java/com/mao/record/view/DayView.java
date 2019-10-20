@@ -7,6 +7,7 @@ import android.graphics.*;
 import android.os.*;
 import java.io.*;
 import com.mao.record.io.Log;
+import android.widget.GridLayout.*;
 
 public class DayView extends TextView 
 {
@@ -41,6 +42,7 @@ public class DayView extends TextView
 	protected void onDraw(Canvas canvas)
 	{
 		super.onDraw(canvas);
+		
 		w = getWidth()/2;
 		h = getHeight()/2;
 		canvas.translate(w,h);
@@ -97,7 +99,7 @@ public class DayView extends TextView
 	}
 	
 	public void drawShift(Canvas canvas,String bkgColor,int alpha,String fontColor,String shift){
-		paint.setTextSize(21f);
+		paint.setTextSize(0.35f*h);
 		int x = (int)paint.measureText(shift.substring(0,1))/2;
 		int y = (int) Math.abs(paint.ascent() + paint.descent())/2;
 		int r = (int)Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
@@ -109,7 +111,7 @@ public class DayView extends TextView
 	}
 	
 	public void drawHour(Canvas canvas, String hour, String hcolor, int alpha){
-		paint.setTextSize(28f);
+		paint.setTextSize(0.5f*h);
 		paint.setColor(Color.parseColor(hcolor));
 		paint.setAlpha(alpha);
 		int x = -(int)(paint.measureText(hour)/2);
@@ -146,5 +148,13 @@ public class DayView extends TextView
 		}
 		return infostr;
 	}
+	
+	@Override  
+	protected void onMeasure (int widthMeasureSpec, int heightMeasureSpec)     
+	{   
+		int width = MeasureSpec.getSize(widthMeasureSpec);  
+		int height = (int)(1.2*width);      
+		setMeasuredDimension(width,height);
+	} 
 
 }

@@ -8,7 +8,7 @@ public class Settings
 	private static Map<String,String> map = new HashMap<String,String>();
 	
 	public static void put(String key, String value){
-		map.put(key,value);
+		map.put(key,String.valueOf(Integer.parseInt(value)));
 	}
 	
 	public static String get(String key){
