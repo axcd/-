@@ -153,7 +153,7 @@ public class DayView extends TextView
 	protected void onMeasure (int widthMeasureSpec, int heightMeasureSpec)     
 	{   
 		int width = MeasureSpec.getSize(widthMeasureSpec);  
-		int height = (int)(1.2*width);      
+		int height = (int)(1.25*width);      
 		setMeasuredDimension(width,height);
 	} 
 
