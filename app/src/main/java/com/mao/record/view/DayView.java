@@ -99,7 +99,7 @@ public class DayView extends TextView
 	}
 	
 	public void drawShift(Canvas canvas,String bkgColor,int alpha,String fontColor,String shift){
-		paint.setTextSize(0.35f*h);
+		paint.setTextSize(0.38f*h);
 		int x = (int)paint.measureText(shift.substring(0,1))/2;
 		int y = (int) Math.abs(paint.ascent() + paint.descent())/2;
 		int r = (int)Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
