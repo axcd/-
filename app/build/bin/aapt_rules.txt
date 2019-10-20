@@ -28,6 +28,6 @@
 # onClick res/layout/about.xml #generated:17
 -keepclassmembers class * { *** onOK(...); }
 
-# onClick res/layout/set.xml #generated:171
+# onClick res/layout/set.xml #generated:182
 -keepclassmembers class * { *** set(...); }
 

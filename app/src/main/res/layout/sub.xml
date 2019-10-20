@@ -173,7 +173,7 @@
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="5"
+			android:maxLength="4"
 			android:text="0"
 			android:inputType="numberDecimal"/>
 
