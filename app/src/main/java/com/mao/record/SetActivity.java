@@ -129,7 +129,7 @@ public class SetActivity extends Activity
 
 		String daystr = editText.getText().toString();
 		if(!daystr.equals("")){
-			int day = Integer.parseInt(daystr);
+			int day = (int) Float.parseFloat(daystr);
 			if(day>=1 && day<=28){
 				Settings.put("day",String.valueOf(day));
 			}else{
@@ -148,4 +148,5 @@ public class SetActivity extends Activity
 			finish();	
 		}
 	}
+
 }

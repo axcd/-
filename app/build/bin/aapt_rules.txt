@@ -19,6 +19,18 @@
 # view res/layout/day_view.xml #generated:2
 -keep class com.mao.record.view.DayView { <init>(...); }
 
+# view res/layout/set.xml #generated:105
+# view res/layout/set.xml #generated:121
+# view res/layout/set.xml #generated:137
+# view res/layout/set.xml #generated:153
+# view res/layout/set.xml #generated:169
+# view res/layout/set.xml #generated:25
+# view res/layout/set.xml #generated:41
+# view res/layout/set.xml #generated:57
+# view res/layout/set.xml #generated:73
+# view res/layout/set.xml #generated:89
+-keep class com.mao.record.view.EditView { <init>(...); }
+
 # onClick res/layout/info.xml #generated:120
 -keepclassmembers class * { *** onDelete(...); }
 
@@ -28,6 +40,6 @@
 # onClick res/layout/about.xml #generated:17
 -keepclassmembers class * { *** onOK(...); }
 
-# onClick res/layout/set.xml #generated:182
+# onClick res/layout/set.xml #generated:181
 -keepclassmembers class * { *** set(...); }
 

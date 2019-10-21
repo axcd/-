@@ -87,7 +87,7 @@ public class SubActivity extends Activity
 		}
 		
 		if(Settings.get("atax")!=null){
-			atax =Integer.parseInt( Settings.get("atax"));
+			atax =Float.parseFloat( Settings.get("atax"));
 		}
 
 		getStr();

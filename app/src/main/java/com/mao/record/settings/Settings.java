@@ -8,7 +8,7 @@ public class Settings
 	private static Map<String,String> map = new HashMap<String,String>();
 	
 	public static void put(String key, String value){
-		map.put(key,String.valueOf(Integer.parseInt(value)));
+		map.put(key,del(String.valueOf(Float.parseFloat(value))));
 	}
 	
 	public static String get(String key){
@@ -35,6 +35,13 @@ public class Settings
 		}
 
 		FileManager.WriteFile("",filename,settings);
+	}
+
+	public static String del(String str){
+		if(str.endsWith(".0")){
+			str = str.replace(".0","");
+		}
+		return str;
 	}
 	
 }

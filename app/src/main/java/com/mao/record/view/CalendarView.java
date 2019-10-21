@@ -54,7 +54,7 @@ public class CalendarView extends LinearLayout
 		//保证startDay以后显示下月
 		Settings.getSettings();
 		if(Settings.get("day")!=null){
-			startDay = Integer.parseInt(Settings.get("day"));
+			startDay = (int) Float.parseFloat(Settings.get("day"));
 		}
 		if(curDate.get(Calendar.DAY_OF_MONTH)>=startDay){
 			curDate.add(Calendar.MONTH,1);

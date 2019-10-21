@@ -22,7 +22,7 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
@@ -38,14 +38,13 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText1"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:hint="输入整数"
-
 				android:maxLength="6"
-				android:inputType="number"/>
+				android:inputType="numberDecimal"/>
 
 			<TextView
 				android:layout_height="wrap_content"
@@ -55,13 +54,13 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText2"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:hint="输入整数"
 				android:maxLength="6"
-				android:inputType="number"/>
+				android:inputType="numberDecimal"/>
 
 			<TextView
 				android:layout_height="wrap_content"
@@ -71,13 +70,13 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText3"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:hint="输入整数"
-				android:maxLength="3"
-				android:inputType="number"/>
+				android:maxLength="4"
+				android:inputType="numberDecimal"/>
 
 			<TextView
 				android:layout_height="wrap_content"
@@ -87,13 +86,13 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText4"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:hint="输入整数"
 				android:maxLength="5"
-				android:inputType="number"/>
+				android:inputType="numberDecimal"/>
 
 			<TextView
 				android:layout_height="wrap_content"
@@ -103,13 +102,13 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText5"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:hint="输入整数"
 				android:maxLength="5"
-				android:inputType="number"/>
+				android:inputType="numberDecimal"/>
 
 			<TextView
 				android:layout_height="wrap_content"
@@ -119,13 +118,13 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText6"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:hint="输入整数"
-				android:maxLength="4"
-				android:inputType="number"/>
+				android:maxLength="5"
+				android:inputType="numberDecimal"/>
 
 			<TextView
 				android:layout_height="wrap_content"
@@ -135,13 +134,13 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText7"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:hint="输入整数"
 				android:maxLength="4"
-				android:inputType="number"/>
+				android:inputType="numberDecimal"/>
 
 			<TextView
 				android:layout_height="wrap_content"
@@ -151,14 +150,14 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText8"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:hint="输入整数"
 				android:maxLength="4"
-				android:inputType="number"/>
-			
+				android:inputType="numberDecimal"/>
+
 			<TextView
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
@@ -167,13 +166,13 @@
 				android:textSize="18sp"
 				android:textStyle="bold|italic"/>
 
-			<EditText
+			<com.mao.record.view.EditView
 				android:id="@+id/editText9"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:hint="输入整数"
-				android:maxLength="5"
-				android:inputType="number"/>
+				android:maxLength="6"
+				android:inputType="numberDecimal"/>
 
 		</LinearLayout>
 
