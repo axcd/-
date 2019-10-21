@@ -58,7 +58,7 @@ public class DayView extends TextView
 				}else if(info[1].contains("夜班")){
 					drawShift(canvas,"#0000FF",150,"#FFFFF0","夜");
 				}
-				if(info[3].equals("1.5倍")){
+				if(info[3].equals("1.5倍") && !info[2].equals("0h")){
 					drawHour(canvas,info[2],"#0000FF",255);
 				}else if(info[3].equals("2.0倍")){
 					drawHour(canvas,info[2],"#FF0000",200);
@@ -72,7 +72,9 @@ public class DayView extends TextView
 				}else if(info[1].contains("夜班")){
 					drawShift(canvas,"#0000FF",150,"#FFFFF0",info[4]);
 				}
-				drawHour(canvas,info[2],"#666666",255);
+				if(!info[2].equals("0h")){
+					drawHour(canvas,info[2],"#666666",255);
+				}
 			}
 			
 			//标记今天

@@ -70,7 +70,6 @@ public class InfoActivity extends Activity
 		list.add("11h");
 		list.add("11.5h");
 		list.add("12h");
-		list.add("12.5h");
 		setAdapter(1,list);
 	
 		list=new ArrayList<String>();
