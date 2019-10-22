@@ -42,8 +42,7 @@
 				android:id="@+id/editText1"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
-				android:hint="输入整数"
-				android:maxLength="6"
+				android:hint="输入0-9999.9"
 				android:inputType="numberDecimal"/>
 
 			<TextView
@@ -58,8 +57,7 @@
 				android:id="@+id/editText2"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
-				android:hint="输入整数"
-				android:maxLength="6"
+				android:hint="输入0-9999.9"
 				android:inputType="numberDecimal"/>
 
 			<TextView
@@ -74,8 +72,7 @@
 				android:id="@+id/editText3"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
-				android:hint="输入整数"
-				android:maxLength="4"
+				android:hint="输入0-99.9"
 				android:inputType="numberDecimal"/>
 
 			<TextView
@@ -90,8 +87,7 @@
 				android:id="@+id/editText4"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
-				android:hint="输入整数"
-				android:maxLength="5"
+				android:hint="输入0-9999.9"
 				android:inputType="numberDecimal"/>
 
 			<TextView
@@ -106,8 +102,7 @@
 				android:id="@+id/editText5"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
-				android:hint="输入整数"
-				android:maxLength="5"
+				android:hint="输入0-9999.9"
 				android:inputType="numberDecimal"/>
 
 			<TextView
@@ -122,8 +117,7 @@
 				android:id="@+id/editText6"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
-				android:hint="输入整数"
-				android:maxLength="5"
+				android:hint="输入0-999.9"
 				android:inputType="numberDecimal"/>
 
 			<TextView
@@ -138,8 +132,7 @@
 				android:id="@+id/editText7"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
-				android:hint="输入整数"
-				android:maxLength="4"
+				android:hint="输入0-999.9"
 				android:inputType="numberDecimal"/>
 
 			<TextView
@@ -154,8 +147,7 @@
 				android:id="@+id/editText8"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
-				android:hint="输入整数"
-				android:maxLength="4"
+				android:hint="输入0-999.9"
 				android:inputType="numberDecimal"/>
 
 			<TextView
@@ -170,8 +162,7 @@
 				android:id="@+id/editText9"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
-				android:hint="输入整数"
-				android:maxLength="6"
+				android:hint="输入0-9999.9"
 				android:inputType="numberDecimal"/>
 
 		</LinearLayout>

@@ -91,42 +91,25 @@ public class SubActivity extends Activity
 		}
 
 		getStr();
-
-		for(int i=0;i<editTexts.length;i++){
-			
-			final EditText editText0 = editTexts[i];
-			editText0.addTextChangedListener(new TextWatcher(){
-				public void beforeTextChanged(CharSequence p1,int p2,int p3,int p4){
-				}	
-				
-				public void onTextChanged(CharSequence cs,int start,int before,int count){
-					String s =cs.toString();
-					if((s.length()>1&&s.startsWith("0")&&s.charAt(1)!='.')||(s.toString().startsWith("."))){
-						editText0.setText(s.substring(1));
-						editText0.setSelection(s.length()-1);
-					}
-				}
-				
-				public void afterTextChanged(Editable p1){		
-					getStr();
-				}		
-			});
-			
-			editText0.setOnFocusChangeListener(new OnFocusChangeListener(){
-				public void onFocusChange(View v,boolean b){
-					String s =editText0.getText().toString();
-					if(!editText0.isFocused()){
-						if(s.endsWith(".")){
-							editText0.setText(s.substring(0,s.length()-1));
-							editText0.setSelection(s.length()-1);
-						}
-						if(s.equals("")){
-							editText0.setText("0");
-						}
-					}
-				}
-			});
-		}
+		
+		editTexts[0].addTextChangedListener(new DecimalInputTextWatcher(editTexts[0], 4, 1));
+		editTexts[1].addTextChangedListener(new DecimalInputTextWatcher(editTexts[1], 4, 1));
+		editTexts[2].addTextChangedListener(new DecimalInputTextWatcher(editTexts[2], 2, 1));
+		editTexts[3].addTextChangedListener(new DecimalInputTextWatcher(editTexts[3], 2, 1));
+		editTexts[4].addTextChangedListener(new DecimalInputTextWatcher(editTexts[4], 3, 1));
+		editTexts[5].addTextChangedListener(new DecimalInputTextWatcher(editTexts[5], 2, 1));
+		editTexts[6].addTextChangedListener(new DecimalInputTextWatcher(editTexts[6], 2, 1));
+		editTexts[7].addTextChangedListener(new DecimalInputTextWatcher(editTexts[7], 3, 1));
+		editTexts[8].addTextChangedListener(new DecimalInputTextWatcher(editTexts[8], 3, 1));
+		editTexts[9].addTextChangedListener(new DecimalInputTextWatcher(editTexts[9], 3, 1));
+		editTexts[10].addTextChangedListener(new DecimalInputTextWatcher(editTexts[10], 4, 1));
+		editTexts[11].addTextChangedListener(new DecimalInputTextWatcher(editTexts[11], 2, 1));
+		editTexts[12].addTextChangedListener(new DecimalInputTextWatcher(editTexts[12], 2, 1));
+		editTexts[13].addTextChangedListener(new DecimalInputTextWatcher(editTexts[13], 2, 1));
+		editTexts[14].addTextChangedListener(new DecimalInputTextWatcher(editTexts[14], 4, 1));
+		editTexts[15].addTextChangedListener(new DecimalInputTextWatcher(editTexts[15], 4, 1));
+		editTexts[16].addTextChangedListener(new DecimalInputTextWatcher(editTexts[16], 4, 1));
+		
 	}
 	
 	public String del(String str){
@@ -233,6 +216,83 @@ public class SubActivity extends Activity
 		}catch(Exception e){
 			editText1.setText("0");
 			editText.setText("");
+		}
+	}
+	
+	class DecimalInputTextWatcher implements TextWatcher {
+
+		private static final int DEFAULT_DECIMAL_DIGITS = 2;//默认 小数的位数  2 位
+
+		private EditText editText;
+		private int decimalDigits;// 小数的位数
+		private int integerDigits;// 整数的位数
+
+		public DecimalInputTextWatcher(EditText editText) {
+			this.editText = editText;
+			this.decimalDigits = DEFAULT_DECIMAL_DIGITS;
+		}
+
+		public DecimalInputTextWatcher(EditText editText, int decimalDigits) {
+			this.editText = editText;
+			if (decimalDigits <= 0)
+				throw new RuntimeException("decimalDigits must > 0");
+			this.decimalDigits = decimalDigits;
+		}
+
+		public DecimalInputTextWatcher(EditText editText, int integerDigits, int decimalDigits) {
+			this.editText = editText;
+			if (integerDigits <= 0)
+				throw new RuntimeException("integerDigits must > 0");
+			if (decimalDigits <= 0)
+				throw new RuntimeException("decimalDigits must > 0");
+			this.decimalDigits = decimalDigits;
+			this.integerDigits = integerDigits;
+		}
+
+		@Override
+		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+		}
+
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+		}
+
+		@Override
+		public void afterTextChanged(Editable editable) {
+			String s = editable.toString();
+			editText.removeTextChangedListener(this);
+
+			if (s.contains(".")) {
+				if (integerDigits > 0) {
+					editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(integerDigits + decimalDigits + 1)});
+				}
+				if (s.length() - 1 - s.indexOf(".") > decimalDigits) {
+					s = s.substring(0, s.indexOf(".") + decimalDigits + 1);
+					editable.replace(0, editable.length(), s.trim());//不输入超出位数的数字
+				}
+			} else {
+				if (integerDigits > 0) {
+					editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(integerDigits + 1)});
+					if (s.length() > integerDigits) {
+						s = s.substring(0, integerDigits);
+						editable.replace(0, editable.length(), s.trim());
+					}
+				}
+
+			}
+			if (s.trim().equals(".")) {//小数点开头，小数点前补0
+				s = "0" + s;
+				editable.replace(0, editable.length(), s.trim());
+			}
+			if (s.startsWith("0") && s.trim().length() > 1) {//多个0开头，只输入一个0
+				if (!s.substring(1, 2).equals(".")) {
+					editable.replace(0, editable.length(), "0");
+				}
+			}
+			editText.addTextChangedListener(this);
+			getStr();
 		}
 	}
 	

@@ -19,7 +19,7 @@
 			android:textSize="20dp"
 			android:text="本月工资："/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/mainEditText"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
@@ -44,13 +44,12 @@
 			android:textSize="20dp"
 			android:text="基本底薪:"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/base"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="6"
 			android:text="2200"
 			android:inputType="numberDecimal"/>
 
@@ -61,13 +60,12 @@
 			android:text="本月绩效"
 			android:paddingLeft="10dp"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/achi"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="6"
 			android:text="1000"
 			android:inputType="numberDecimal"/>
 
@@ -85,13 +83,12 @@
 			android:textSize="20dp"
 			android:text="平时加班:"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/h1"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="4"
 			android:text="40"
 			android:inputType="numberDecimal"/>
 
@@ -102,13 +99,12 @@
 			android:text="夜班天数:"
 			android:paddingLeft="10dp"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/night_days"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="2"
 			android:text="12"
 			android:inputType="numberDecimal"/>
 
@@ -126,13 +122,12 @@
 			android:textSize="20dp"
 			android:text="周末加班:"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/h2"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="5"
 			android:text="44"
 			android:inputType="numberDecimal"/>
 
@@ -143,13 +138,12 @@
 			android:text="调休时数:"
 			android:paddingLeft="10dp"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/break_off"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="5"
 			android:text="0"
 			android:inputType="numberDecimal"/>
 
@@ -167,13 +161,12 @@
 			android:textSize="20dp"
 			android:text="节日加班:"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/h3"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="4"
 			android:text="0"
 			android:inputType="numberDecimal"/>
 
@@ -184,13 +177,12 @@
 			android:text="事假时数:"
 			android:paddingLeft="10dp"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/compassionate_leave"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="6"
 			android:text="0"
 			android:inputType="numberDecimal"/>
 
@@ -208,13 +200,12 @@
 			android:textSize="20dp"
 			android:text="夜班补贴:"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/night_allowance"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="6"
 			android:text="15"
 			android:inputType="numberDecimal"/>
 
@@ -225,13 +216,12 @@
 			android:text="病假时数:"
 			android:paddingLeft="10dp"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/sick"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="6"
 			android:text="0"
 			android:inputType="numberDecimal"/>
 
@@ -249,13 +239,12 @@
 			android:textSize="20dp"
 			android:text="岗位补贴:"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/work_allowance"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="5"
 			android:text="100"
 			android:inputType="numberDecimal"/>
 
@@ -266,13 +255,12 @@
 			android:text="社会保险:"
 			android:paddingLeft="10dp"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/noun"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="6"
 			android:text="350"
 			android:inputType="numberDecimal"/>
 
@@ -290,13 +278,12 @@
 			android:textSize="20dp"
 			android:text="交通补贴:"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/traffic_allowance"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="5"
 			android:text="0"
 			android:inputType="numberDecimal"/>
 
@@ -307,13 +294,12 @@
 			android:text="住房积金:"
 			android:paddingLeft="10dp"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/fund"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="6"
 			android:text="160"
 			android:inputType="numberDecimal"/>
 
@@ -331,13 +317,12 @@
 			android:textSize="20dp"
 			android:text="高温补贴:"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/temperature_allowance"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="5"
 			android:text="0"
 			android:inputType="numberDecimal"/>
 
@@ -348,14 +333,13 @@
 			android:text="个人交税:"
 			android:paddingLeft="10dp"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/tax"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:editable="false"
 			android:width="70sp"
-			android:maxLength="6"
 			android:text="0"/>
 
 	</LinearLayout>
@@ -372,13 +356,12 @@
 			android:textSize="20dp"
 			android:text="其他补贴:"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/other_allowance"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="5"
 			android:text="0"
 			android:inputType="numberDecimal"/>
 
@@ -389,13 +372,12 @@
 			android:text="其他扣款:"
 			android:paddingLeft="10dp"/>
 
-		<EditText
+		<com.mao.record.view.EditView
 			android:id="@+id/other_deduction"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:gravity="center"
 			android:width="70sp"
-			android:maxLength="6"
 			android:text="0"
 			android:inputType="numberDecimal"/>
 
