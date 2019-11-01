@@ -87,6 +87,7 @@ public class InfoActivity extends Activity
 		list.add("年休");
 		setAdapter(3,list);
 		editText.setText(dayView.getInfoByIndex(5));
+		editText.setSelection(dayView.getInfoByIndex(5).length());
 	}
 	
 	public void bind(){

@@ -19,7 +19,6 @@
 # view res/layout/day_view.xml #generated:2
 -keep class com.mao.record.view.DayView { <init>(...); }
 
-# view res/layout/info.xml #generated:125
 # view res/layout/set.xml #generated:101
 # view res/layout/set.xml #generated:116
 # view res/layout/set.xml #generated:131
