@@ -51,10 +51,10 @@
 # view res/layout/sub.xml #generated:86
 -keep class com.mao.record.view.EditView { <init>(...); }
 
-# onClick res/layout/info.xml #generated:146
+# onClick res/layout/info.xml #generated:147
 -keepclassmembers class * { *** onDelete(...); }
 
-# onClick res/layout/info.xml #generated:155
+# onClick res/layout/info.xml #generated:156
 -keepclassmembers class * { *** onInsert(...); }
 
 # onClick res/layout/about.xml #generated:17
