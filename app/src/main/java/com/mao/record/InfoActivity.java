@@ -15,6 +15,7 @@ import android.transition.*;
 public class InfoActivity extends Activity
 {
 	private Spinner[] spinner = new Spinner[4];
+	private EditText editText ;
 	private DayView dayView;
 
     @Override
@@ -28,7 +29,7 @@ public class InfoActivity extends Activity
 		Window window = getWindow();	
 		LayoutParams windowLayoutParams = window.getAttributes(); 
 		windowLayoutParams.width = (int) (display.getWidth()*1.0); 
-		windowLayoutParams.height = (int) (display.getHeight()*0.65); 	
+		windowLayoutParams.height = (int) (display.getHeight()*0.76); 	
 		window.setGravity(Gravity.BOTTOM);	
 		window.setWindowAnimations(R.style.MyDialogAnimation);
 	
@@ -85,6 +86,7 @@ public class InfoActivity extends Activity
 		list.add("病假");
 		list.add("年休");
 		setAdapter(3,list);
+		editText.setText(dayView.getInfoByIndex(5));
 	}
 	
 	public void bind(){
@@ -93,6 +95,8 @@ public class InfoActivity extends Activity
 		spinner[1]=(Spinner) findViewById(R.id.calendarviewSpinner2);
 		spinner[2]=(Spinner) findViewById(R.id.calendarviewSpinner3);
 		spinner[3]=(Spinner) findViewById(R.id.calendarviewSpinner4);
+		editText = (EditText)findViewById(R.id.infoEditText);
+		
 	}
 	
 	public void setAdapter(int i, List list){
@@ -117,6 +121,7 @@ public class InfoActivity extends Activity
 		dayView.setInfoByIndex(2,"");
 		dayView.setInfoByIndex(3,"");
 		dayView.setInfoByIndex(4,"");
+		dayView.setInfoByIndex(5,"");
 		dayView.invalidate();
 		finish();
 	}
@@ -132,6 +137,8 @@ public class InfoActivity extends Activity
 		dayView.setInfoByIndex(3,s3);
 		String s4 = spinner[3].getSelectedItem().toString();
 		dayView.setInfoByIndex(4,s4);
+		String s5 = editText.getText().toString();
+		dayView.setInfoByIndex(5,s5);
 		
 		MainActivity.getCalendarView().updateInfos(dayView.getInfoString());
 		dayView.invalidate();

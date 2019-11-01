@@ -53,7 +53,8 @@
 			android:layout_width="match_parent"
 			android:textAlignment="center"
 			android:gravity="center"
-			android:layout_marginRight="30dp"/>
+			android:layout_marginRight="30dp"
+			android:dropDownVerticalOffset="0dp"/>
 
 	</LinearLayout>
 
@@ -109,13 +110,38 @@
 
 	<LinearLayout
 		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_margin="10dp">
+
+		<TextView
+			android:layout_width="50dp"
+			android:layout_height="match_parent"
+			android:text="备注"
+			android:gravity="left|center_vertical"
+			android:layout_gravity="center"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_marginLeft="30dp"/>
+
+		<com.mao.record.view.EditView
+			android:id="@+id/infoEditText"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:ems="10"
+			android:layout_marginRight="30dp"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:orientation="horizontal"
 		android:padding="5dp"
 		android:gravity="center"
-		android:layout_margin="5dp"
+		android:layout_margin="25dp"
 		android:layout_gravity="center"
-		android:weightSum="1.0">
+		android:weightSum="1.0"
+		android:layout_marginTop="50dp">
 
 		<Button
 			android:layout_height="wrap_content"

@@ -288,7 +288,7 @@ public class SubActivity extends Activity
 			}
 			if (s.startsWith("0") && s.trim().length() > 1) {//多个0开头，只输入一个0
 				if (!s.substring(1, 2).equals(".")) {
-					editable.replace(0, editable.length(), "0");
+					editable.replace(0, editable.length(),s.substring(1, 2));
 				}
 			}
 			editText.addTextChangedListener(this);

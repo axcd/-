@@ -13,7 +13,7 @@ public class DayView extends TextView
 {
 	public boolean isToday = false;
 	public boolean isSelected = false;
-	private String[] info = {"","","","",""};        
+	private String[] info = {"","","","","",""};        
 	private Paint paint = new Paint();
 	private int w = 45;
 	private int h = 60;
@@ -128,7 +128,9 @@ public class DayView extends TextView
 	}
 	
 	public void setInfo(String[] info){
-		this.info = info;
+		for(int i=0;i<info.length;i++){
+			this.info[i]=info[i];
+		}
 	}
 	
 	public String[] getInfo(){
