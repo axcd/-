@@ -137,7 +137,7 @@ public class InfoActivity extends Activity
 		dayView.setInfoByIndex(3,s3);
 		String s4 = spinner[3].getSelectedItem().toString();
 		dayView.setInfoByIndex(4,s4);
-		String s5 = editText.getText().toString();
+		String s5 = editText.getText().toString().replaceAll(" ","");
 		dayView.setInfoByIndex(5,s5);
 		
 		MainActivity.getCalendarView().updateInfos(dayView.getInfoString());
