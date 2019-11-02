@@ -126,7 +126,7 @@
 			android:id="@+id/infoEditText"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:hint="输入空格无效"
+			android:hint="限9个字以内"
 			android:maxLength="9"
 			android:ems="10"
 			android:layout_marginRight="30dp"
