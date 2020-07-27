@@ -17,6 +17,7 @@ public class DayView extends TextView
 	private Paint paint = new Paint();
 	private int w = 45;
 	private int h = 60;
+	private int workDay = 1;
 	
 	public DayView(Context context){
 		super(context);
@@ -31,6 +32,16 @@ public class DayView extends TextView
 	public DayView(Context context,AttributeSet attrs, int defStyleAttr) {
 		super(context,attrs,defStyleAttr);
 		initView(context);
+	}
+
+	public void setWorkDay(int workDay)
+	{
+		this.workDay = workDay;
+	}
+
+	public int getWorkDay()
+	{
+		return workDay;
 	}
 
 	private void initView(Context context){

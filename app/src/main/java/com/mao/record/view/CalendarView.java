@@ -311,6 +311,10 @@ public class CalendarView extends LinearLayout
 				cv.setText(String.valueOf(day));
 				cv.setInfoByIndex(0,addZero(day));
 				
+				if(position%7==6||position%7==0){
+					cv.setWorkDay(0);
+				}
+				
 				if(day>=startDay){
 					for(String tmp:infos[0]){
 						if(tmp.split(" ")[0].equals(cv.getInfoByIndex(0))){

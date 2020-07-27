@@ -41,16 +41,16 @@
 		</activity>
 
 		<activity
-			android:label="计算工资"
-			android:theme="@style/AppTheme"
-			android:name=".SubActivity">
+			android:label="加班信息"
+			android:theme="@style/MyDialogTheme"
+			android:name=".InfoActivity">
 
 		</activity>
 
 		<activity
-			android:label="加班信息"
-			android:theme="@style/MyDialogTheme"
-			android:name=".InfoActivity">
+			android:label="计算工资"
+			android:theme="@style/AppTheme"
+			android:name=".SubActivity">
 
 		</activity>
 

@@ -27,14 +27,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mao.record.SubActivity"
-            android:label="计算工资"
-            android:theme="@style/AppTheme" >
-        </activity>
-        <activity
             android:name="com.mao.record.InfoActivity"
             android:label="加班信息"
             android:theme="@style/MyDialogTheme" >
+        </activity>
+        <activity
+            android:name="com.mao.record.SubActivity"
+            android:label="计算工资"
+            android:theme="@style/AppTheme" >
         </activity>
         <activity
             android:name="com.mao.record.SetActivity"

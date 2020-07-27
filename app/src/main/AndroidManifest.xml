@@ -15,28 +15,28 @@
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+		
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-		
-        <activity
-			android:label="计算工资"
-			android:theme="@style/AppTheme"
-			android:name=".SubActivity" >
-		</activity>
-		
+
         <activity
 			android:label="加班信息"
 			android:theme="@style/MyDialogTheme"
 			android:name=".InfoActivity" >
 		</activity>
 		
+        <activity
+			android:label="计算工资"
+			android:theme="@style/AppTheme"
+			android:name=".SubActivity" >
+		</activity>
+
         <activity
 			android:label="设置"
 			android:theme="@android:style/Theme.Holo.Light.Dialog"

@@ -78,6 +78,9 @@ public class InfoActivity extends Activity
 		list.add("2.0倍");
 		list.add("3.0倍");
 		setAdapter(2,list);
+		if(dayView.getWorkDay()==0 && dayView.getInfoByIndex(3).equals("")){
+			setSpinnerValue(spinner[2],"2.0倍");
+		}
 		
 		list = new ArrayList<String>();
 		list.add("加班");

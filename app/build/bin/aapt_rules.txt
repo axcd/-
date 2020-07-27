@@ -1,7 +1,7 @@
 # view AndroidManifest.xml #generated:44
 -keep class com.mao.record.AboutActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:34
+# view AndroidManifest.xml #generated:29
 -keep class com.mao.record.InfoActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:20
@@ -10,7 +10,7 @@
 # view AndroidManifest.xml #generated:39
 -keep class com.mao.record.SetActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:29
+# view AndroidManifest.xml #generated:34
 -keep class com.mao.record.SubActivity { <init>(...); }
 
 # view res/layout/main.xml #generated:7
